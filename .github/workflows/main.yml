@@ -1,0 +1,26 @@
+name: Get Links
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  get-links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: Run script
+        run: |
+          url='https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/reality'
+          wget -O TEXT.txt $url
+      - name: Commit and push changes
+        run: |
+          git config user.name '${{ github.actor }}'
+          git config user.email '${{ github.actor }}@users.noreply.github.com'
+          git add TEXT.txt
+          git commit -m "Update TEXT.txt"
+          git push --set-upstream origin HEAD
+        env:
+          ##GITHUB_TOKEN: ${{ secrets.GPTAuto }}
