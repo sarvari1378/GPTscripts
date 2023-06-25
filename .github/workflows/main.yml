@@ -14,7 +14,7 @@ jobs:
       - name: Run script
         run: |
           url='https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/reality'
-          wget -O TEXT.txt $url
+          wget -O Reality $url
       - name: Commit and push changes
         run: |
           git config user.name '${{ github.actor }}'
