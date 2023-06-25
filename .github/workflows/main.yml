@@ -22,5 +22,5 @@ jobs:
           git add TEXT.txt
           git commit -m "Update TEXT.txt"
           git push --set-upstream origin HEAD
-        env:
+        ##env:
           ##GITHUB_TOKEN: ${{ secrets.GPTAuto }}
