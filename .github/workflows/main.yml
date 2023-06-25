@@ -19,8 +19,8 @@ jobs:
         run: |
           git config user.name '${{ github.actor }}'
           git config user.email '${{ github.actor }}@users.noreply.github.com'
-          git add TEXT.txt
-          git commit -m "Update TEXT.txt"
+          git add Reality
+          git commit -m "Update Reality"
           git push --set-upstream origin HEAD
         ##env:
           ##GITHUB_TOKEN: ${{ secrets.GPTAuto }}
