@@ -1,8 +1,7 @@
 name: Run Script and Save Output
 on:
-  push:
-    branches:
-      - main
+  schedule:
+    - cron: '*/30 * * * *'
 jobs:
   run-script:
     runs-on: ubuntu-latest
