@@ -1,26 +1,34 @@
-name: Get Links
-
+name: Run Script and Save Output
 on:
   push:
     branches:
       - main
-
 jobs:
-  get-links:
+  run-script:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository code
+      - name: Checkout repository
         uses: actions/checkout@v2
       - name: Run script
         run: |
-          url='https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/reality'
-          wget -O Reality $url
+          #!/bin/bash
+          # Download the file from the provided URL
+          curl -o links.txt https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/reality
+          # Initialize a counter variable
+          counter=1
+          # Loop through each line in the file
+          while read -r line; do
+              # Replace the text after the '#' character with "AZADI-X"
+              new_line=$(echo "$line" | sed "s/#.*/#🏳SAJED(AZADI)-$counter/")
+              # Increment the counter variable
+              ((counter++))
+              # Print the modified line
+              echo "$new_line"
+          done < links.txt > Reality-$counter
       - name: Commit and push changes
         run: |
-          git config user.name '${{ github.actor }}'
-          git config user.email '${{ github.actor }}@users.noreply.github.com'
-          git add Reality
-          git commit -m "Update Reality"
-          git push --set-upstream origin HEAD
-        ##env:
-          ##GITHUB_TOKEN: ${{ secrets.GPTAuto }}
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add .
+          git commit -m "Update Reality file"
+          git push origin main
