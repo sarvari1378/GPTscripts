@@ -35,7 +35,7 @@ jobs:
 
           date = JalaliDate(datetime.now()).strftime('%Y-%m-%d')
             with open('date.txt', 'w') as f:
-            f.write(date)
+              f.write(date)
 
 
     - name: Commit and push changes
