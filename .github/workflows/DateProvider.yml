@@ -1,8 +1,6 @@
 name: Update date.txt
 
-on:
-  schedule:
-    - cron: '0 0 * * *'
+on: [push]
 
 jobs:
   update-date:
@@ -20,7 +18,7 @@ jobs:
         run: pip install persiantools
 
       - name: Run script
-        run: python path/to/your/script.py
+        run: python Date provider/Python.py
 
       - name: Commit changes
         run: |
