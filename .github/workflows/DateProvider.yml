@@ -18,12 +18,26 @@ jobs:
         run: pip install persiantools
 
       - name: Run script
-        run: python Dateprovider/Python.py
+        run:  |
+          import subprocess
+          import sys
+
+            try:
+                from persiantools.jdatetime import JalaliDate
+                except ModuleNotFoundError:
+                subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'persiantools'])
+                from persiantools.jdatetime import JalaliDate
+
+          from datetime import datetime
+
+                date = JalaliDate(datetime.now()).strftime('%Y-%m-%d')
+                with open('date.txt', 'w') as f:
+                f.write(date)
 
       - name: Commit changes
         run: |
-          git config --global user.name 'Your Name'
-          git config --global user.email 'your-email@example.com'
+          git config --global user.name 'sarvari1378'
+          git config --global user.email 'ms.sarvari1378@gmail.com'
           git add Date\ provider/date.txt
           git commit -m 'Update date.txt'
           git push
