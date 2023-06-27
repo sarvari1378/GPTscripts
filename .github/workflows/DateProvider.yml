@@ -1,0 +1,31 @@
+name: Update date.txt
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  update-date:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+
+      - name: Install dependencies
+        run: pip install persiantools
+
+      - name: Run script
+        run: python path/to/your/script.py
+
+      - name: Commit changes
+        run: |
+          git config --global user.name 'Your Name'
+          git config --global user.email 'your-email@example.com'
+          git add Date\ provider/date.txt
+          git commit -m 'Update date.txt'
+          git push
