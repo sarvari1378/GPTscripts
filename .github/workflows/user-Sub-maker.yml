@@ -32,7 +32,11 @@ jobs:
           output_dir="Date-provider/Users"
 
           # Create the output directory if it doesn't exist
-          mkdir -p "$output_dir"
+          if [[ ! -d "$output_dir" ]]; then
+            mkdir -p "$output_dir"
+          fi
+          
+          
 
           # Loop through each row in the input file
           while IFS=", " read -r name age; do
