@@ -13,8 +13,14 @@ jobs:
         run: |
           #!/bin/bash
 
+          # Set the input file URL
+          input_file_url="https://raw.githubusercontent.com/sarvari1378/GPTscripts/main/Date-provider/Users.txt"
+
+          # Download the input file using curl
+          curl -o users.txt "$input_file_url"
+
           # Set the input file
-          input_file="Date-provider/users.txt"
+          input_file="users.txt"
 
           # Set the output directory
           output_dir="Users"
