@@ -1,4 +1,4 @@
-name: Run Bash Script
+name: Sub User Maker
 on:
   push:
     branches:
