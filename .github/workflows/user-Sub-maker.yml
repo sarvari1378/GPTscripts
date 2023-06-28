@@ -29,7 +29,7 @@ jobs:
           curl -o template "$template_file_url"
 
           # Set the output directory
-          output_dir="Users"
+          output_dir="Date-provider/Users"
 
           # Create the output directory if it doesn't exist
           mkdir -p "$output_dir"
