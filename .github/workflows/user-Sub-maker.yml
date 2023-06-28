@@ -14,7 +14,7 @@ jobs:
           #!/bin/bash
 
           # Set the input file
-          input_file="users.txt"
+          input_file="Date-provider/users.txt"
 
           # Set the output directory
           output_dir="Users"
