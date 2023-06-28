@@ -1,0 +1,23 @@
+name: User sub maker
+on:
+  push:
+    branches:
+      - main
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Run shell script
+        run: |
+          chmod +x Date provider/User-Reality-Maker.sh
+          ./Date provider/User-Reality-Maker.sh
+          
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'Your Name'
+          git config --global user.email 'your-email@example.com'
+          git add Users
+          git commit -m 'Save output of shell script'
+          git push
