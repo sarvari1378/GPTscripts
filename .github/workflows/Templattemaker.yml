@@ -1,6 +1,7 @@
 name: Template Maker
 on:
-  [push]
+  schedule:
+    - cron: '*/20 * * * *'
 jobs:
   run-script:
     runs-on: ubuntu-latest
