@@ -31,10 +31,6 @@ jobs:
           # Set the output directory
           output_dir="Date-provider/Users"
 
-          # Create the output directory if it doesn't exist
-          if [[ ! -d "$output_dir" ]]; then
-            mkdir -p "$output_dir"
-          fi
           
           
 
