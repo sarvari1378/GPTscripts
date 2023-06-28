@@ -22,6 +22,12 @@ jobs:
           # Set the input file
           input_file="users.txt"
 
+          # Set the template file URL
+          template_file_url="https://raw.githubusercontent.com/sarvari1378/GPTscripts/main/Date-provider/template"
+
+          # Download the template file using curl
+          curl -o template "$template_file_url"
+
           # Set the output directory
           output_dir="Users"
 
