@@ -1,0 +1,35 @@
+name: Template Maker
+on:
+  schedule:
+    - cron: '*/20 * * * *'
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Run script
+        run: |
+          #!/bin/bash
+          # Create the output directory if it doesn't exist
+          mkdir -p "Date provider"
+          # Download the file from the provided URL
+          curl -o links.txt https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/reality
+          # Initialize a counter variable
+          counter=1
+          # Loop through each line in the file
+          while read -r line; do
+              # Replace the text after the '#' character with "AZADI-X"
+              new_line=$(echo "$line" | sed "s/#.*/#🏳SAJED(AZADI)-$counter/")
+              # Increment the counter variable
+              ((counter++))
+              # Print the modified line
+              echo "$new_line"
+          done < links.txt > "Date provider/template"
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add .
+          git commit -m "Update Reality file"
+          git push origin main
