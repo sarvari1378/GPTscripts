@@ -1,7 +1,6 @@
 name: Template Maker
 on:
-  schedule:
-    - cron: '*/20 * * * *'
+ [push]
 jobs:
   run-script:
     runs-on: ubuntu-latest
@@ -25,7 +24,7 @@ jobs:
               ((counter++))
               # Print the modified line
               echo "$new_line"
-          done < links.txt > "Date provider/template"
+          done < links.txt > "Date-provider/template"
       - name: Commit and push changes
         run: |
           git config --global user.name 'GitHub Action'
