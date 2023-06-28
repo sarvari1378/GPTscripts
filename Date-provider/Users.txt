@@ -5,4 +5,6 @@ fateme, -2
 asghar, -2
 omid, 0
 farzan, 99
+asdasdasdad, 0
 
+ali, 0
