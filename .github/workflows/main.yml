@@ -1,4 +1,4 @@
-name: Run Script and Save Output
+name: Update Reality-1 file
 on:
   schedule:
     - cron: '*/60 * * * *'
