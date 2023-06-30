@@ -21,7 +21,7 @@ jobs:
           # Loop through each line in the file
           while read -r line; do
               # Replace the text after the '#' character with "AZADI-X"
-              new_line=$(echo "$line" | sed "s|#.*|#🏳-Azadi-$jalali-$counter|")
+              new_line=$(echo "$line" | sed "s|#.*|#🏳-Azadi-$counter|")
               # Increment the counter variable
               ((counter++))
               # Print the modified line
