@@ -16,10 +16,13 @@ jobs:
           curl -o links.txt https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/reality
           # Initialize a counter variable
           counter=1
+          #set time variable 
+          jalali=$(curl -s 'https://www.time.ir/' | grep 'id="ctl00_cphMiddle_Sampa_Web_View_TimeUI_DateConvert00cphMiddle_3733_lblFirstDateNumeral"' | sed 's/<[^>]*>//g' | sed 's/^[ \t]*//' | sed 'y/۰۱۲۳۴۵۶۷۸۹/0123456789/' | tr -d '\\n')
+
           # Loop through each line in the file
           while read -r line; do
               # Replace the text after the '#' character with "AZADI-X"
-              new_line=$(echo "$line" | sed "s/#.*/#🏳SAJED(AZADI)-$counter/")
+              new_line=$(echo "$line" | sed "s/#.*/#🏳SAJED(AZADI)-$jalali/")
               # Increment the counter variable
               ((counter++))
               # Print the modified line
