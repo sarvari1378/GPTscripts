@@ -12,7 +12,7 @@ jobs:
           #!/bin/bash
 
          # Download the file from the provided URL
-         curl links.txt https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/reali 
+         curl -o links.txt https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/reality
          # Initialize a counter variable
          counter=1
 
