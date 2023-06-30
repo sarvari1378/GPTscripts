@@ -10,24 +10,32 @@ jobs:
       - name: Run script
         run: |
           #!/bin/bash
-          # Create the output directory if it doesn't exist
-          mkdir -p "Date provider"
-          # Download the file from the provided URL
-          curl -o links.txt https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/reality
-          # Initialize a counter variable
-          counter=1
-          #set time variable 
-          jalali=$(curl -s 'https://www.time.ir/' | grep 'id="ctl00_cphMiddle_Sampa_Web_View_TimeUI_DateConvert00cphMiddle_3733_lblFirstDateNumeral"' | sed 's/<[^>]*>//g' | sed 's/^[ \t]*//' | sed 'y/۰۱۲۳۴۵۶۷۸۹/0123456789/' | tr -d '\\n')
 
-          # Loop through each line in the file
-          while read -r line; do
-              # Replace the text after the '#' character with "AZADI-X"
-              new_line=$(echo "$line" | sed "s/#.*/#🏳SAJED(AZADI)-$jalali/")
-              # Increment the counter variable
-              ((counter++))
-              # Print the modified line
-              echo "$new_line"
-          done < links.txt > "Date-provider/template"
+         # Download the file from the provided URL
+         curl links.txt https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/reali 
+         # Initialize a counter variable
+         counter=1
+
+         #Time seting
+         jalali=$(curl -s 'https://www.time.ir/' | grep 'id="ctl00_cphMiddle_Sampa_Web_View_TimeUI_DateConvert00cphMiddle_3733_lblFirstDateNumeral"' | sed 's/<[^>]*>//g' | sed 's/^[ \t]*//' | sed 'y/۰۱۲۳۴۵۶۷۸۹/0123456789/' | tr -d '\\n')
+
+         # Remove newline character from jalali variable
+         jalali=$(printf "%s" "$jalali")
+
+         # Loop through each line in the file
+         while read -r line; do
+             # Remove the text after the '#' character
+             new_line="${line%%#*}"
+
+             # Concatenate the new text
+             new_line+="#🏳SAJED(AZADI)-${jalali}"
+
+             # Increment the counter variable
+             ((counter++))
+
+             # Print the modified line
+             echo "$new_line"
+         done < links.txt > Reality-$counter
       - name: Commit and push changes
         run: |
           git config --global user.name 'GitHub Action'
