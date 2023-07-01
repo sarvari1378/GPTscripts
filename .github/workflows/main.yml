@@ -1,4 +1,4 @@
-name: Template maker
+name: Reality-1 updater
 on:
    schedule:
     - cron: '*/60 * * * *'
