@@ -29,10 +29,8 @@ jobs:
 
              # Concatenate the new text
              new_line+="#🏳SAJED(AZADI)-$counter-${jalali}"
-
              # Increment the counter variable
              ((counter++))
-
              # Print the modified line
              echo "$new_line"
          done < links.txt > Reality-$counter
