@@ -28,7 +28,7 @@ jobs:
              new_line="${line%%#*}"
 
              # Concatenate the new text
-             new_line+="#🏳SAJED(AZADI)-${jalali}"
+             new_line+="#🏳SAJED(AZADI)-$counter-${jalali}"
 
              # Increment the counter variable
              ((counter++))
