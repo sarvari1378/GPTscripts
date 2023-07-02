@@ -23,7 +23,7 @@ jobs:
           #!/bin/bash
           jalali=$(curl -s 'https://www.time.ir/' | grep 'id="ctl00_cphMiddle_Sampa_Web_View_TimeUI_DateConvert00cphMiddle_3733_lblFirstDateNumeral"' | sed 's/<[^>]*>//g' | sed 's/^[ \t]*//' | sed 'y/۰۱۲۳۴۵۶۷۸۹/0123456789/' | tr -d '\\n')
           jalali=$(printf "%s" "$jalali")
-
+          echo $jalali
       - name: Remove files from SUB folder
         run: |
           if [ -d "SUB" ]; then
