@@ -1,7 +1,4 @@
-Reza, 30
-Mohammad, 40
-Ali, 20
-Asghar, 10
-Ahmad, 0
-Sajed, -11
+OMID, 12
+sajed, 0
+paria, -11
 
