@@ -1,4 +1,4 @@
-RzaSR, 23
+AMIN, 23
 Sajed, 998
 ALI, 11
 XXXXXXX, -1
