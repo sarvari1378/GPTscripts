@@ -1,3 +1,6 @@
 sajed, 0
 ali, 12
 mohammad, 12
+AHMAD, 15
+omid, 24
+ali asghar, 25
