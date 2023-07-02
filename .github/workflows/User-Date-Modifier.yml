@@ -1,6 +1,7 @@
 name: Rozshomar
 on:
-  [push]
+   schedule:
+    - cron: '10 0 * * *'
 jobs:
   update-users:
     runs-on: ubuntu-latest
@@ -9,8 +10,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: main
-      - name: Install dependencies
-        run: sudo apt-get update && sudo apt-get install -y jq
       - name: Update Users.txt
         run: |
           while IFS= read -r line; do
