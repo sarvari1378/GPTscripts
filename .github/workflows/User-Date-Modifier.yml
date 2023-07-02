@@ -1,0 +1,30 @@
+name: Rozshomar
+on:
+  [push]
+jobs:
+  update-users:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+        with:
+          ref: main
+      - name: Install dependencies
+        run: sudo apt-get update && sudo apt-get install -y jq
+      - name: Update Users.txt
+        run: |
+          while IFS= read -r line; do
+            name=$(echo "$line" | cut -d',' -f1)
+            number=$(echo "$line" | cut -d',' -f2)
+            new_number=$((number-1))
+            sed -i "s/$line/$name, $new_number/" Users.txt
+          done < Users.txt
+      - name: Set up git
+        run: |
+          git config --global user.email "you@example.com"
+          git config --global user.name "Your Name"
+      - name: Commit changes
+        run: |
+          git add Users.txt
+          git commit -m "Update Users.txt"
+          git push origin main
