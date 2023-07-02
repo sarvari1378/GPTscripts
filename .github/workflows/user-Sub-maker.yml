@@ -20,10 +20,10 @@ jobs:
           
       - name: Set current date as environment variable in Jalali format
         run: |
-          sudo apt-get update && sudo apt-get install -y python3-pip
-          pip3 install jdatetime
-          TODAY=$(python3 -c "import jdatetime; print(jdatetime.date.today().strftime('%Y-%m-%d'))")
-          echo "TODAY=$TODAY" >> $GITHUB_ENV
+          #!/bin/bash
+          jalali=$(curl -s 'https://www.time.ir/' | grep 'id="ctl00_cphMiddle_Sampa_Web_View_TimeUI_DateConvert00cphMiddle_3733_lblFirstDateNumeral"' | sed 's/<[^>]*>//g' | sed 's/^[ \t]*//' | sed 'y/۰۱۲۳۴۵۶۷۸۹/0123456789/' | tr -d '\\n')
+          jalali=$(printf "%s" "$jalali")
+
       - name: Remove files from SUB folder
         run: |
           if [ -d "SUB" ]; then
@@ -42,7 +42,7 @@ jobs:
             if [ "$value" -gt 0 ]; then
               j=1
               while read line; do
-                echo "${line/\#*/#$name-$j-$TODAY}" >> "SUB/REALY-$name"
+                echo "${line/\#*/#$name-$j-$jalali}" >> "SUB/REALY-$name"
                 j=$((j+1))
               done < file.txt
               i=$((i+1))
