@@ -13,19 +13,23 @@ jobs:
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "<actions@github.com>"
-      - name: Create and remove files from users.txt
+      - name: Remove files from SUB folder
+        run: |
+          if [ -d "SUB" ]; then
+            rm -rf SUB/*
+          fi
+      - name: Create and copy files from users.txt
         run: |
           if [ ! -d "SUB" ]; then
             mkdir SUB
           fi
           while IFS=, read -r name value; do
             if [ "$value" -gt 0 ]; then
-              touch "SUB/REALY-$name"
+              cp Reality-1 "SUB/REALY-$name"
             fi
           done < Users.txt
-         
       - name: Commit and push changes
         run: |
           git add SUB
-          git commit -m "Add and remove SUB folder files"
+          git commit -m "Add and copy SUB folder files"
           git push origin main
