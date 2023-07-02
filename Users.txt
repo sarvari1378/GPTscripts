@@ -1,4 +1,4 @@
-RzaSR, 24
-Sajed, 999
-ALI, 12
-XXXXXXX, 0
+RzaSR, 23
+Sajed, 998
+ALI, 11
+XXXXXXX, -1
