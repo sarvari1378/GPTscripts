@@ -31,7 +31,7 @@ jobs:
             if [ "$value" -gt 0 ]; then
               j=1
               while read line; do
-                echo "${line/\#/#$name - $j}" >> "SUB/REALY-$name"
+                echo "${line/\#*/#$name - $j}" >> "SUB/REALY-$name"
                 j=$((j+1))
               done < file.txt
               i=$((i+1))
