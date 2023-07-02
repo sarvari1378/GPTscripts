@@ -1,4 +1,7 @@
 OMID, 12
 sajed, 0
 paria, -11
+hossein, 20
+amir hossein, 40
+aras, 50
 
