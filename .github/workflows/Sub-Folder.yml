@@ -1,0 +1,26 @@
+name: Create files from users.txt
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: Set up Git
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<actions@github.com>"
+      - name: Create files from users.txt
+        run: |
+          mkdir SUB
+          while IFS=, read -r name value; do
+            touch "SUB/REALY-$name"
+          done < Users.txt
+      - name: Commit and push changes
+        run: |
+          git add SUB
+          git commit -m "Add SUB folder and files"
+          git push origin main
