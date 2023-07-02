@@ -1,4 +1,4 @@
-name: SUB maker
+name: Create files from Userx.txt
 on:
   push:
     branches:
@@ -13,14 +13,16 @@ jobs:
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "<actions@github.com>"
-      - name: Create files from users.txt
+      - name: Create files from Userx.txt
         run: |
           if [ ! -d "SUB" ]; then
             mkdir SUB
           fi
           while IFS=, read -r name value; do
-            touch "SUB/REALY-$name"
-          done < users.txt
+            if [ "$value" -gt 0 ]; then
+              touch "SUB/REALY-$name"
+            fi
+          done < Userx.txt
       - name: Commit and push changes
         run: |
           git add SUB
