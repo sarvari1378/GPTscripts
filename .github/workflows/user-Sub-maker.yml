@@ -1,57 +1,26 @@
-name: Sub User Maker
+name: Create files from users.txt
 on:
   push:
     branches:
       - main
 jobs:
-  run-script:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Check out repository code
         uses: actions/checkout@v2
-      - name: Run script
+      - name: Set up Git
         run: |
-          #!/bin/bash
-
-          # Set the input file URL
-          input_file_url="https://raw.githubusercontent.com/sarvari1378/GPTscripts/main/Date-provider/Users.txt"
-
-          # Download the input file using curl
-          curl -o users.txt "$input_file_url"
-
-          # Set the input file
-          input_file="users.txt"
-
-          # Set the template file URL
-          template_file_url="https://raw.githubusercontent.com/sarvari1378/GPTscripts/main/Date-provider/template"
-
-          # Download the template file using curl
-          curl -o template "$template_file_url"
-
-          # Set the output directory
-          output_dir="Date-provider/Users"
-
-          
-          
-
-          # Loop through each row in the input file
-          while IFS=", " read -r name age; do
-            # Set the output file name based on the row name
-            output_file="$output_dir/${name}"
-
-            # Check if the value in the second column is 0
-            if [[ "$age" -le "0" ]]; then
-              # Write a custom message to the output file
-              echo "vless://64694d4a-2c05-4ffe-aef1-68c0169cccb7@146.248.115.39:443?encryption=none&fp=firefox&mode=gun&pbk=TXpA-KUEqsg6YlZUXf0gZIe14rFjKZZNAqWzjruNoh8&security=reality&serviceName=&sid=790d3c76&sni=www.speedtest.net&spx=%2F&type=grpc#Your-subscription-has-ended." > "$output_file"
-            else
-              # Copy the template file to the output file
-              cp template "$output_file"
-            fi
-          done < "$input_file"
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<actions@github.com>"
+      - name: Create files from users.txt
+        run: |
+          mkdir SUB
+          while IFS=, read -r name value; do
+            touch "SUB/REALY-$name"
+          done < Users.txt
       - name: Commit and push changes
         run: |
-          git config --global user.name 'GitHub Actions'
-          git config --global user.email 'actions@github.com'
-          git add .
-          git commit -m "Update files"
-          git push
+          git add SUB
+          git commit -m "Add SUB folder and files"
+          git push origin main
