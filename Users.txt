@@ -1,0 +1,3 @@
+sajed, 0
+ali, 12
+mohammad, 12
