@@ -1,4 +1,7 @@
-Sajed, 0
-ali, 12
-mohammad, 20
+Reza, 30
+Mohammad, 40
+Ali, 20
+Asghar, 10
+Ahmad, 0
+Sajed, -11
 
