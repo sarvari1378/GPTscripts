@@ -22,7 +22,7 @@ jobs:
             if [ "$value" -gt 0 ]; then
               touch "SUB/REALY-$name"
             fi
-          done < Userx.txt
+          done < User.txt
       - name: Commit and push changes
         run: |
           git add SUB
