@@ -26,13 +26,15 @@ jobs:
           if [ ! -d "SUB" ]; then
             mkdir SUB
           fi
+          i=1
           while IFS=, read -r name value; do
             if [ "$value" -gt 0 ]; then
-              sed "s/Sajed/$name/g" file.txt > "SUB/REALY-$name"
+              sed "s/#./#$name - $i/g" file.txt > "SUB/REALY-$name"
+              i=$((i+1))
             else
               echo "vless://64694d4a-2c05-4ffe-aef1-68c0169cccb7@146.248.115.39:443?encryption=none&fp=firefox&mode=gun&pbk=TXpA-KUEqsg6YlZUXf0gZIe14rFjKZZNAqWzjruNoh8&security=reality&serviceName=&sid=790d3c76&sni=www.speedtest.net&spx=%2F&type=grpc#Your-subscription-has-ended." > "SUB/REALY-$name"
             fi
-          done < users.txt
+          done < Users.txt
       - name: Commit and push changes
         run: |
           git add SUB
