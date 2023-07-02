@@ -13,16 +13,14 @@ jobs:
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "<actions@github.com>"
-      - name: Get date from date.txt
-        run: |
-          date=$(cat date.txt)
-          echo "date=$date" >> $GITHUB_ENV
+ 
           
       - name: Set current date as environment variable in Jalali format
         run: |
           pip install jdatetime
           TODAY=$(python3 -c "import jdatetime; print(jdatetime.date.today().strftime('%Y-%m-%d'))")
           echo "TODAY=$TODAY" >> $GITHUB_ENV
+          echo $TODAY
       - name: Remove files from SUB folder
         run: |
           if [ -d "SUB" ]; then
@@ -41,7 +39,7 @@ jobs:
             if [ "$value" -gt 0 ]; then
               j=1
               while read line; do
-                echo "${line/\#*/#$name-$j-$jalali}" >> "SUB/REALY-$name"
+                echo "${line/\#*/#$name-$j-$TODAY}" >> "SUB/REALY-$name"
                 j=$((j+1))
               done < file.txt
               i=$((i+1))
