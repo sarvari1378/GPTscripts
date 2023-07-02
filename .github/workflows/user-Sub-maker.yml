@@ -13,7 +13,7 @@ jobs:
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "<actions@github.com>"
-      - name: Create and remove files from Users.txt
+      - name: Create and remove files from users.txt
         run: |
           if [ ! -d "SUB" ]; then
             mkdir SUB
@@ -23,12 +23,7 @@ jobs:
               touch "SUB/REALY-$name"
             fi
           done < Users.txt
-          for file in SUB/*; do
-            filename=$(basename -- "$file")
-            if ! grep -q "$filename" Users.txt; then
-              rm "$file"
-            fi
-          done
+         
       - name: Commit and push changes
         run: |
           git add SUB
