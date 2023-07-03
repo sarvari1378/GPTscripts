@@ -1,5 +1,5 @@
-AMIN, 23
-Sajed, 998
-ALI, 11
-XXXXXXX, -1
-saghar, 0
+AMIN, 22
+Sajed, 997
+ALI, 10
+XXXXXXX, -2
+saghar, -1
