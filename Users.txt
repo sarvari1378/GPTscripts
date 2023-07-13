@@ -1,7 +1,7 @@
-AMIN, 13
-Sajed, 988
-Aref, 90
-melika, 7
-ALI, 1
-XXXXXXX, -11
-saghar, -10
+AMIN, 12
+Sajed, 987
+Aref, 89
+melika, 6
+ALI, 0
+XXXXXXX, -12
+saghar, -11
