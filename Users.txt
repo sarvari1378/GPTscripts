@@ -1,8 +1,8 @@
-AMIN, 11
-Sajed, 986
-Aref, 88
-melika, 5
-Borji, 98
-Danial, 28
-AmirMozh, 28
-RY, 29
+AMIN, 10
+Sajed, 985
+Aref, 87
+melika, 4
+Borji, 97
+Danial, 27
+AmirMozh, 27
+RY, 28
