@@ -2,7 +2,7 @@ AMIN, 6
 Sajed, 981
 Arefe, 997
 Aref, 83
-melika, 0
+melika, 10
 Borji, 93
 Danial, 23
 AmirMozh, 23
