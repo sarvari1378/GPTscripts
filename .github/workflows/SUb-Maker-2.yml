@@ -80,4 +80,5 @@ jobs:
            git config --global user.email 'action@github.com'
            git add .
            git commit -m "Updated"
+           git pull origin main
            git push origin main
