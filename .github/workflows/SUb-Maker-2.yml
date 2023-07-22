@@ -60,7 +60,9 @@ jobs:
             if [ "$value" -gt 0 ]; then
               j=1
               while read line; do
-                flag_pattern='[\U0001F1E6-\U0001F1FF][\U0001F1E6-\U0001F1FF]'
+                flag_pattern='[\uD83C\uDDE6-\uD83C\uDDFF]{2}'
+                flags=$(grep -oP "$flag_pattern" <<< "$text")
+
                 flag=$(sed -n "s/.*\($flag_pattern\).*/\1/p" <<< "$line")
 
                 echo "${line/\#*/#$name-$flag-$j-$TODAY}" >> "SUB/REALITY-$name"
