@@ -20,7 +20,7 @@ jobs:
     steps:
       # Checks out the repository code using the `actions/checkout@v2` action
       - name: Check out repository code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       # Sets up Git by configuring the user name and email
       - name: Set up Git
