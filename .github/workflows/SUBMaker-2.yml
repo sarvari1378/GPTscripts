@@ -1,0 +1,65 @@
+name: Create files from users.txt
+on:
+  push:
+    branches:
+      - main
+  schedule:
+      - cron: '*/120 * * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: Set up Git
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<actions@github.com>"
+ 
+          
+      - name: Set current date as environment variable in Jalali format
+        run: |
+          pip install jdatetime
+          TODAY=$(python3 -c "import jdatetime; print(jdatetime.date.today().strftime('%Y-%m-%d'))")
+          echo "TODAY=$TODAY" >> $GITHUB_ENV
+          echo $TODAY
+      - name: Remove files from SUB folder
+        run: |
+          if [ -d "SUB" ]; then
+            rm -rf SUB/*
+          fi
+      - name: Download file from URL
+        run: |
+          curl -o file.txt "https://raw.githubusercontent.com/yebekhe/ConfigCollector/main/sub/reality"
+      - name: Create and copy files from users.txt
+        run: |
+          if [ ! -d "SUB" ]; then
+            mkdir SUB
+          fi
+          i=1
+          prev_name=""
+          while IFS=, read -r name value; do
+            if [ "$value" -gt 0 ]; then
+              j=1
+              while read line; do
+                # Set flag based on previous name
+                if [ "$prev_name" == "some_value" ]; then
+                  flag="some_flag"
+                else
+                  flag="some_other_flag"
+                fi
+                echo "${line/\#*/#$name-$flag-$j-$TODAY}" >> "SUB/REALITY-$name"
+                j=$((j+1))
+              done < file.txt
+              i=$((i+1))
+            else
+              echo "vless://64694d4a-2c05-4ffe-aef1-68c0169cccb7@146.248.115.39:443?encryption=none&fp=firefox&mode=gun&pbk=TXpA-KUEqsg6YlZUXf0gZIe14rFjKZZNAqWzjruNoh8&security=reality&serviceName=&sid=790d3c76&sni=www.speedtest.net&spx=%2F&type=grpc#Your-subscription-has-ended." > "SUB/REALITY-$name"
+            fi
+            prev_name=$name
+          done < Users.txt
+      - name: Commit and push changes
+        run: |
+          git add SUB
+          git commit -m "Add and copy SUB folder files"
+          git push origin main
+
