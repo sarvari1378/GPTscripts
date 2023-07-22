@@ -61,7 +61,6 @@ jobs:
               j=1
               while read line; do
                 flag_pattern='[\uD83C\uDDE6-\uD83C\uDDFF]{2}'
-                flags=$(grep -oP "$flag_pattern" <<< "$text")
 
                 flag=$(sed -n "s/.*\($flag_pattern\).*/\1/p" <<< "$line")
 
