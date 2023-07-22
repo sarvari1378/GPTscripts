@@ -61,7 +61,7 @@ jobs:
               j=1
               while read line; do
                 flag_pattern='[\U0001F1E6-\U0001F1FF][\U0001F1E6-\U0001F1FF]'
-                flag=$(sed -n "s/.*\($flag_pattern\).*/\1/p" <<< "$link")
+                flag=$(sed -n "s/.*\($flag_pattern\).*/\1/p" <<< "$line")
 
                 echo "${line/\#*/#$name-$flag-$j-$TODAY}" >> "SUB/REALITY-$name"
                 j=$((j+1))
