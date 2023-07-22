@@ -61,5 +61,7 @@ jobs:
         run: |
           git add SUB
           git commit -m "Add and copy SUB folder files"
+          git pull --rebase origin main
           git push origin main
+
 
