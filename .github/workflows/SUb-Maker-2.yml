@@ -60,11 +60,10 @@ jobs:
             if [ "$value" -gt 0 ]; then
               j=1
               while read line; do
-                flag_pattern = re.compile(u'[\U0001F1E6-\U0001F1FF][\U0001F1E6-\U0001F1FF]')
-                match = flag_pattern.search(line)
-                if match:
-                    flag = match.group()
-                    name = f"{flag}{name}"
+                flag=$(echo "$line" | grep -oP '\U0001F1E6-\U0001F1FF\U0001F1E6-\U0001F1FF')
+                if [ ! -z "$flag" ]; then
+                    name="$flag$name"
+                fi
                 echo "${line/\#*/#$name-$j-$TODAY}" >> "SUB/REALITY-$name"
                 j=$((j+1))
               done < file.txt
