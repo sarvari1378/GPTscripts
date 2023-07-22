@@ -63,7 +63,6 @@ jobs:
                 flag_pattern='[\U0001F1E6-\U0001F1FF][\U0001F1E6-\U0001F1FF]'
                 flag=$(sed -n "s/.*\($flag_pattern\).*/\1/p" <<< "$link")
 
-                fi
                 echo "${line/\#*/#$name-$flag-$j-$TODAY}" >> "SUB/REALITY-$name"
                 j=$((j+1))
               done < file.txt
