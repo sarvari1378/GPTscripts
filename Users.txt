@@ -12,7 +12,7 @@ Arman, 3
 Rasta, 24
 Mahshad, 5
 Ghazale, 14
-Fereshte, 0
+Fereshte, 30
 Pedram, 6
 MaryamArj, 23
 Tahmine, 16
