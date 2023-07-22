@@ -60,7 +60,7 @@ jobs:
             if [ "$value" -gt 0 ]; then
               j=1
               while read line; do
-                flag=$(echo "$line" | grep -oP '\U0001F1E6-\U0001F1FF\U0001F1E6-\U0001F1FF')
+                flag=$(echo "$line" | grep -oE '\U0001F1E6-\U0001F1FF\U0001F1E6-\U0001F1FF')
                 if [ ! -z "$flag" ]; then
                     name="$flag$name"
                 fi
