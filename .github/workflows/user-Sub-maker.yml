@@ -73,9 +73,9 @@ jobs:
       # Adds, commits, and pushes changes to the `SUB` folder.
       - name: Commit and push changes
         run: |
-          git add SUB
-          git commit -m "Add and copy SUB folder files"
-          git pull --rebase origin main
-          git pull --rebase --autostash origin main
-          git push origin main
-
+           git config --global user.name 'GitHub Action'
+           git config --global user.email 'action@github.com'
+           git add .
+           git commit -m "Updated"
+           git pull origin main
+           git push origin main
