@@ -37,7 +37,6 @@ jobs:
               # Increment the counter variable
               ((counter++))
               # Print the modified line
-              echo "$new_line"
           done < links.txt > Reality-$counter
       - name: Commit and push changes
         run: |
