@@ -1,7 +1,7 @@
 name: Rozshomar
 on:
-  schedule:
-    - cron: '10 0 * * *'
+    [push]
+ 
 jobs:
   update-users:
     runs-on: ubuntu-latest
