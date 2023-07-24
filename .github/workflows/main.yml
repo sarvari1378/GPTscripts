@@ -1,7 +1,13 @@
 name: Reality-1 maker
 on:
-   schedule:
+  push:
+    branches:
+      - main
+
+# The workflow will also run on a schedule, every 120 minutes
+  schedule:
     - cron: '*/120 * * * *'
+
 jobs:
   run-script:
     runs-on: ubuntu-latest
