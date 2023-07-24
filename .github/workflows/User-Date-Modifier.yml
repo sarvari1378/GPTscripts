@@ -1,6 +1,6 @@
 name: Rozshomar
 on:
-   schedule:
+  schedule:
     - cron: '10 0 * * *'
 jobs:
   update-users:
@@ -16,8 +16,9 @@ jobs:
             name=$(echo "$line" | cut -d',' -f1)
             number=$(echo "$line" | cut -d',' -f2)
             new_number=$((number-1))
-            sed -i "s/$line/$name, $new_number/" Users.txt
+            echo "$name, $new_number" >> Users.tmp
           done < Users.txt
+          mv Users.tmp Users.txt
       - name: Set up git
         run: |
           git config --global user.email "you@example.com"
