@@ -1,4 +1,4 @@
-AMIN, 0
+AMIN, 30
 Sajed, 975
 Arefe, 991
 Aref, 77
