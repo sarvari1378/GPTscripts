@@ -16,7 +16,6 @@ Fereshte, 26
 Pedram, 2
 MaryamArj, 19
 Tahmine, 12
-Hesari, -3
 RezaSr, 2
 Karimian, 12
 HosseinHaji, 16
