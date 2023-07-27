@@ -10,7 +10,7 @@ RY, 16
 Deli, 17
 Arman, 28
 Rasta, 19
-Mahshad, 0
+Mahshad, 30
 Ghazale, 9
 Fereshte, 25
 Pedram, 1
