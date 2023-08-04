@@ -11,7 +11,7 @@ Deli, 9
 Arman, 20
 Rasta, 11
 Mahshad, 22
-Ghazale, 1
+Ghazale, 31
 Fereshte, 17
 Pedram, 24
 MaryamArj, 10
