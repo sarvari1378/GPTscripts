@@ -25,6 +25,6 @@ Saeed, 12
 Kamyab, 17
 AmirRza, 987
 Farzan, 987
-Akrami, -1
+Akrami, 31
 MaryamHajilo, 1100
 , -12
