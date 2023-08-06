@@ -16,7 +16,7 @@ Fereshte, 15
 Pedram, 22
 MaryamArj, 8
 Tahmine, 1
-RezaSr, -9
+Paria, 30
 Karimian, 1
 HosseinHaji, 5
 Mobina, 8
@@ -28,5 +28,4 @@ Farzan, 985
 Akrami, 29
 MaryamHajilo, 1098
 Arjmand, 29
-Paria, 30
 Mhdi, 30
