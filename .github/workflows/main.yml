@@ -27,7 +27,7 @@ jobs:
           jalali=$(curl -s 'https://www.time.ir/' | grep 'id="ctl00_cphMiddle_Sampa_Web_View_TimeUI_DateConvert00cphMiddle_3733_lblFirstDateNumeral"' | sed 's/<[^>]*>//g' | sed 's/^[ \t]*//' | sed 'y/۰۱۲۳۴۵۶۷۸۹/0123456789/' | tr -d '\\n')
           jalali=$(printf "%s" "$jalali")
 
-          Time=$(date +'%Y-%m-%d %H:%M:%S' -d "$(curl -sI https://www.google.com | grep '^Date:' | cut -d' ' -f3-7) +3 hours 30 minutes")
+          Time=$(date +'%H:%M:%S' -d "$(curl -sI https://www.google.com | grep '^Date:' | cut -d' ' -f3-7) +3 hours 30 minutes")
           
           # Loop through each line in the file
           while read -r line; do
