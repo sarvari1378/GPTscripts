@@ -51,6 +51,8 @@ jobs:
       # Creates the `SUB` directory if it doesn't exist, reads data from `Users.txt`, and creates/copies files based on its content
       - name: Create and copy files from users.txt
         run: |
+          Time=$(date +'%H:%M' -d "$(curl -sI https://www.google.com | grep '^Date:' | cut -d' ' -f3-7) +3 hours 30 minutes")
+          
           if [ ! -d "SUB" ]; then
             mkdir SUB
           fi
@@ -61,8 +63,7 @@ jobs:
               j=1
               while read line; do
                  Flag=$(echo $line | python3 -c "import re, sys; print(re.search(r'[^\x00-\x7F]+', sys.stdin.read()).group())")
-                 Time=$(date +'%H:%M' -d "$(curl -sI https://www.google.com | grep '^Date:' | cut -d' ' -f3-7) +3 hours 30 minutes")
-          
+                 
                 echo "${line/\#*/#$name-$Flag-$j-$Time-$TODAY}" >> "SUB/REALITY-$name"
                 j=$((j+1))
               done < file.txt
