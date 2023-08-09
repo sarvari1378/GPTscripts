@@ -35,7 +35,7 @@ jobs:
           TODAY=$(python3 -c "import jdatetime; print(jdatetime.date.today().strftime('%Y-%m-%d'))")
           echo "TODAY=$TODAY" >> $GITHUB_ENV
           echo $TODAY
-
+          
       # Removes all files from the `SUB` folder if it exists
       - name: Remove files from SUB folder
         run: |
@@ -47,11 +47,11 @@ jobs:
       - name: Download file from URL
         run: |
           curl -o file.txt "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/reality"
-
+          Time=$(date +'%H:%M' -d "$(curl -sI https://www.google.com | grep '^Date:' | cut -d' ' -f3-7) +3 hours 30 minutes")
+          
       # Creates the `SUB` directory if it doesn't exist, reads data from `Users.txt`, and creates/copies files based on its content
       - name: Create and copy files from users.txt
         run: |
-          Time=$(date +'%H:%M' -d "$(curl -sI https://www.google.com | grep '^Date:' | cut -d' ' -f3-7) +3 hours 30 minutes")
           
           if [ ! -d "SUB" ]; then
             mkdir SUB
