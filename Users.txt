@@ -10,7 +10,7 @@ Mahshad, 12
 Ghazale, 21
 Fereshte, 7
 Pedram, 14
-MaryamArj, 0
+MaryamArj, 30
 Paria, 22
 Mobina, 0
 Mostafa, 971
