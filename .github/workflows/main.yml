@@ -27,13 +27,13 @@ jobs:
           jalali=$(curl -s 'https://www.time.ir/' | grep 'id="ctl00_cphMiddle_Sampa_Web_View_TimeUI_DateConvert00cphMiddle_3733_lblFirstDateNumeral"' | sed 's/<[^>]*>//g' | sed 's/^[ \t]*//' | sed 'y/۰۱۲۳۴۵۶۷۸۹/0123456789/' | tr -d '\\n')
           jalali=$(printf "%s" "$jalali")
 
-          Time=$(date +'%H:%M:%S' -d "$(curl -sI https://www.google.com | grep '^Date:' | cut -d' ' -f3-7) +3 hours 30 minutes")
+          Tiran=$(TZ='Asia/Tehran' date '+%H:%M')
           
           # Loop through each line in the file
           while read -r line; do
               Flag=$(echo $line | python3 -c "import re, sys; print(re.search(r'[^\x00-\x7F]+', sys.stdin.read()).group())")
               # Replace the text after the '#' character with "AZADI-X"
-              echo "${line/\#*/#$Flag-$Time-$jalali-$counter}" >> "Reality-1"
+              echo "${line/\#*/#$Flag-T:$Tiran-D:$jalali-N:$counter}" >> "Reality-1"
               # Increment the counter variable
               ((counter++))
               # Print the modified line
