@@ -31,10 +31,16 @@ jobs:
       # Installs the `jdatetime` package, sets the current date in Jalali format as an environment variable named `TODAY`, and prints its value
       - name: Set current date as environment variable in Jalali format
         run: |
-          pip install jdatetime
-          TODAY=$(python3 -c "import jdatetime; print(jdatetime.date.today().strftime('%Y-%m-%d'))")
+          pip install jdatetime pytz
+
+                    
+          TODAY=$(python3 -c "import jdatetime, pytz; print(jdatetime.date.today().strftime('%Y-%m-%d'))")
           echo "TODAY=$TODAY" >> $GITHUB_ENV
           echo $TODAY
+          
+          TIRAN=$(python3 -c "import datetime, pytz; tehran = pytz.timezone('Asia/Tehran'); tehran_time = datetime.datetime.now(tehran); print(f'{tehran_time.hour}:{tehran_time.minute}')")
+          echo "TIRAN=$TIRAN" >> $GITHUB_ENV
+          echo $TIRAN
           
       # Removes all files from the `SUB` folder if it exists
       - name: Remove files from SUB folder
@@ -47,12 +53,12 @@ jobs:
       - name: Download file from URL
         run: |
           curl -o file.txt "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/reality"
-          Time=$(date +'%H:%M:%S' -d "$(curl -sI https://www.google.com | grep '^Date:' | cut -d' ' -f3-7) +3 hours 30 minutes")
+          
           
       # Creates the `SUB` directory if it doesn't exist, reads data from `Users.txt`, and creates/copies files based on its content
       - name: Create and copy files from users.txt
         run: |
-          
+
           if [ ! -d "SUB" ]; then
             mkdir SUB
           fi
@@ -61,10 +67,13 @@ jobs:
           while IFS=, read -r name value; do
             if [ "$value" -gt 0 ]; then
               j=1
+
+              echo "vless://64694d4a-2c05-4ffe-aef1-68c0169cccb7@146.248.115.39:443?encryption=none&fp=firefox&mode=gun&pbk=TXpA-KUEqsg6YlZUXf0gZIe14rFjKZZNAqWzjruNoh8&security=reality&serviceName=&sid=790d3c76&sni=www.speedtest.net&spx=%2F&type=grpc#|User:$name|Remain Days:$value|" >> "SUB/REALITY-$name"
+
               while read line; do
                  Flag=$(echo $line | python3 -c "import re, sys; print(re.search(r'[^\x00-\x7F]+', sys.stdin.read()).group())")
-                 
-                echo "${line/\#*/#$name-$Flag-$j-$Time-$TODAY}" >> "SUB/REALITY-$name"
+
+                echo "${line/\#*/#|$name|$Flag|H:$TIRAN|D:$TODAY|N:$j|}" >> "SUB/REALITY-$name"
                 j=$((j+1))
               done < file.txt
 
@@ -81,5 +90,5 @@ jobs:
            git config --global user.email 'action@github.com'
            git add .
            git commit -m "Updated"
-           git pull origin main
+           git pull origin main --rebase # <-- Added --rebase flag here to fix the error.
            git push origin main
