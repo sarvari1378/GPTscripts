@@ -1,5 +1,5 @@
 # This is a GitHub Actions workflow that performs several tasks
-name: Create files from users.txt
+name: V2ray SUB Creator
 
 # The workflow will run when there is a push to the `main` branch
 on:
