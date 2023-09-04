@@ -13,4 +13,4 @@ Mostafa, 949
 Paria, 0
 Sajed, 933
 Samira, 6
-TESTNEW, 0
+TESTNEW, -6
