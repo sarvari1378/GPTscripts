@@ -1,5 +1,5 @@
 # This is a GitHub Actions workflow that performs several tasks
-name: V2ray SUB Creator
+name: Creat SUB Folder 
 
 # The workflow will run when there is a push to the `main` branch
 on:
@@ -56,6 +56,7 @@ jobs:
       
       - name: Install regex module
         run: pip install regex
+
           
       # Creates the `SUB` directory if it doesn't exist, reads data from `Users.txt`, and creates/copies files based on its content
       - name: Create and copy files from users.txt
@@ -73,15 +74,20 @@ jobs:
               echo "vless://64694d4a-2c05-4ffe-aef1-68c0169cccb7@146.248.115.39:443?encryption=none&fp=firefox&mode=gun&pbk=TXpA-KUEqsg6YlZUXf0gZIe14rFjKZZNAqWzjruNoh8&security=reality&serviceName=&sid=790d3c76&sni=www.speedtest.net&spx=%2F&type=grpc#|User:$name|Remain Days:$value|" >> "SUB/REALITY-$name"
 
               while read line; do
-                Flag=$(echo $line | python3 -c "import regex, sys; print(regex.search(r'\p{So}\p{So}', sys.stdin.read()).group())")
 
-                echo "${line/\#*/#|$name|$Flag|H:$TIRAN|D:$TODAY|N:$j|}" >> "SUB/REALITY-$name"
+                Flag=$(echo $line | python3 -c "import regex, sys; match = regex.search(r'\p{So}\p{So}', sys.stdin.read()); Flag = match.group() if match else ''; print(Flag)")
+                
+                emoji_num=$(echo $j | python3 -c "import sys; num = int(sys.stdin.read()); base = 0x1F600; emoji_str = ''; for digit in str(num): emoji_str += chr(base + int(digit)); print(emoji_str)")
+                
+                echo "${line/\#*/#|$name|$Flag|H:$TIRAN|D:$TODAY|N:$emoji_num|}" >> "SUB/REALITY-$name"
                 j=$((j+1))
               done < file.txt
 
               i=$((i+1))
             else
+
               echo "vless://64694d4a-2c05-4ffe-aef1-68c0169cccb7@146.248.115.39:443?encryption=none&fp=firefox&mode=gun&pbk=TXpA-KUEqsg6YlZUXf0gZIe14rFjKZZNAqWzjruNoh8&security=reality&serviceName=&sid=790d3c76&sni=www.speedtest.net&spx=%2F&type=grpc#Your-subscription-has-ended." > "SUB/REALITY-$name"
+
             fi
           done < Users.txt
 
