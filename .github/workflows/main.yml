@@ -61,6 +61,23 @@ jobs:
       # Creates the `SUB` directory if it doesn't exist, reads data from `Users.txt`, and creates/copies files based on its content
       - name: Create and copy files from users.txt
         run: |
+          number_to_emoji() {
+              local number=$1
+              if (( number < 0 || number > 99 )); then
+                  echo "The input number must be a one or two-digit integer."
+                  return 1
+              fi
+              local -a emoji_dict=("0️⃣" "1️⃣" "2️⃣" "3️⃣" "4️⃣" "5️⃣" "6️⃣" "7️⃣" "8️⃣" "9️⃣")
+              if (( number < 10 )); then
+                  echo "${emoji_dict[number]}"
+              else
+                  local tens=$((number / 10))
+                  local ones=$((number % 10))
+                  echo "${emoji_dict[tens]}${emoji_dict[ones]}"
+              fi
+          }
+
+          
           if [ ! -d "SUB" ]; then
             mkdir SUB
           fi
@@ -76,7 +93,7 @@ jobs:
               
                 Flag=$(echo $line | python3 -c "import regex, sys; match = regex.search(r'\p{So}\p{So}', sys.stdin.read()); Flag = match.group() if match else ''; print(Flag)")
 
-              
+                emoji_number=$(number_to_emoji $j)
                 
                 echo "${line/\#*/#|$Flag|H:$TIRAN|D:$TODAY|N:$emoji_number|}" >> "SUB/REALITY-$name"
                 j=$((j+1))
