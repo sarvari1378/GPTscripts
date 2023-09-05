@@ -1,6 +1,5 @@
 name: Rozshomar
 on:
-  push:
   schedule:
     - cron: '10 20 * * *'
 jobs:
