@@ -1,8 +1,6 @@
-AmirRza, 942
-Aref, 22
-Arefe, 936
-Borji, 28
-Karymian, -5
-MaryamArj, -5
-Mostafa, 936
-Sajed, 920
+AmirRza, 941
+Aref, 21
+Arefe, 935
+Borji, 27
+Mostafa, 935
+Sajed, 919
