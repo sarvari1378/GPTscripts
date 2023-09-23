@@ -1,6 +1,6 @@
-AmirRza, 1
-Aref, VIP
-Arefe, 1
-Borji, VIP
-Mostafa, VIP
-Sajed, VIP
+AmirRza, 0
+Aref, -1
+Arefe, 0
+Borji, -1
+Mostafa, -1
+Sajed, -1
