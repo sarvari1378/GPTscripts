@@ -1,6 +1,6 @@
-AmirRza, 931
-Aref, 11
-Arefe, 925
-Borji, 17
-Mostafa, 925
-Sajed, 909
+AmirRza, 1
+Aref, VIP
+Arefe, 1
+Borji, VIP
+Mostafa, VIP
+Sajed, VIP
