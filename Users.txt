@@ -1,6 +1,6 @@
 AmirRza, -2
-Aref, -3
-Arefe, -2
-Borji, -3
-Mostafa, -3
-Sajed, -3
+Aref, 30
+Arefe, 30
+Borji, 30
+Mostafa, 20
+Sajed, 20
