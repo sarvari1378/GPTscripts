@@ -8,7 +8,7 @@ on:
       - main
 
 # The workflow will also run on a schedule, every 120 minutes
-schedule:
+  schedule:
   - cron: '*/120 * * * *'
 
 # Defines a job named `build`
