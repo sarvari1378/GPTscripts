@@ -26,19 +26,13 @@ jobs:
       - name: Create SingBOX directory
         run: mkdir -p SingBoxs
 
+
       - name: Create SingBOX files
         run: |
           content=$(curl -s ${{ env.URL }} | sed 's/رایگان//g')
           while IFS= read -r line; do
-            IFS=', ' read -r -a array <<< "$line"
-            user=${array[0]}
-            date=${array[1]}
-            username=${array[2]}
-            variable=${array[3]}
-            if [ "$date" != "0" ]; then
-              modified_content=$(echo "$content" | sed "s/رایگان/|$username|/g")
-              echo "$modified_content" > "SingBoxs/${username}"
-            fi
+            username=$(echo "$line" | cut -d ',' -f 1)
+            echo "$content" > "SingBoxs/${username}"
           done < Users.txt
 
       - name: Commit and push changes
