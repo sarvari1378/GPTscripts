@@ -79,7 +79,8 @@ jobs:
             mkdir SUB
           fi
 
-          i=1
+          IFS=$'\n' read -d '' -r -a lines < Users.txt
+
           for line in "${lines[@]}"; do
             # Split the line into an array using ',' as the delimiter
             IFS=, read -r -a array <<< "$line"
