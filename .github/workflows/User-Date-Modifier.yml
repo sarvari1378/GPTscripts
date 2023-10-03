@@ -1,7 +1,6 @@
 name: Rozshomar
 on:
-  schedule:
-    - cron: '10 20 * * *'
+  [push]
 jobs:
   update-users:
     runs-on: ubuntu-latest
@@ -14,10 +13,11 @@ jobs:
         run: |
           while IFS= read -r line; do
             name=$(echo "$line" | cut -d',' -f1)
-            number=$(echo "$line" | cut -d',' -f2)
-            new_number=$((number-1))
-            if [ $new_number -ge -5 ]; then
-              echo "$name, $new_number" >> Users.tmp
+            date=$(echo "$line" | cut -d',' -f2)
+            username=$(echo "$line" | cut -d',' -f3)
+            new_date=$((date-1))
+            if [ $new_date -ge -5 ]; then
+              echo "$name, $new_date, $username" >> Users.tmp
             fi
           done < <(sort Users.txt)
           mv Users.tmp Users.txt
