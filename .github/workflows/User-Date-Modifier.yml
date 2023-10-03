@@ -12,15 +12,20 @@ jobs:
           ref: main
       - name: Update Users.txt
         run: |
+          declare -a users
           while IFS= read -r line; do
-            name=$(echo "$line" | cut -d',' -f1)
-            date=$(echo "$line" | cut -d',' -f2)
-            username=$(echo "$line" | cut -d',' -f3)
+            users+=("$line")
+          done < Users.txt
+          > Users.tmp
+          for user in "${users[@]}"; do
+            name=$(echo "$user" | cut -d',' -f1)
+            date=$(echo "$user" | cut -d',' -f2)
+            username=$(echo "$user" | cut -d',' -f3)
             new_date=$((date-1))
             if [ $new_date -ge -5 ]; then
               echo "$name, $new_date, $username" >> Users.tmp
             fi
-          done < <(sort Users.txt)
+          done
           mv Users.tmp Users.txt
       - name: Set up git
         run: |
