@@ -1,8 +1,7 @@
-AmirRza, 999975,                
-Aref, 5,                 @ArefNazari1996
-Arefe, 5,                 @Arefehkamyab
-Borji, 5,                
-MohammadAliPor, 99977,                
-Mostafa, -5,                 @mostafa
-HamidSarvari, 999984,               
-Sajed, 99984,               
+AmirRza, 999974,                 
+Aref, 4,                  @ArefNazari1996
+Arefe, 4,                  @Arefehkamyab
+Borji, 4,                 
+MohammadAliPor, 99976,                 
+HamidSarvari, 999983,                
+Sajed, 99983,                
