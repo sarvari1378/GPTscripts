@@ -7,17 +7,4 @@ HamidSarvari, 999976,
 Sajed, 99976,                       
 poshtibaninumber1, 29, 
 Arefehkamyab, 29, 
-Arefehkamyab, 179, 
-
-
-
-
-
-
-
-
-
-
-
-
-ssarvari1378, 278
+Arefehkamyab, 179
