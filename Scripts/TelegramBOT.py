@@ -90,31 +90,15 @@ def send_photo(chat_id, file_id, caption=None, reply_markup=None):
         return None
 
 def add_line_to_github_file(username, date):
-    # Set your GitHub personal access token and the repository details
-    github_token = "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"
-    repo_owner = "sarvari1378"
-    repo_name = "GPTscripts"
-    file_path = "Users.txt"
+    file_path = "Users.txt"  # Replace with your desired file path
 
-    # Define the content you want to add
-    new_line = f"{username}, {date}\n"
+    try:
+        # Define the content you want to add
+        new_line = f"{username}, {date}\n"
 
-    # Get the current content of the file from the repository
-    url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/contents/{file_path}"
-    headers = {
-        "Authorization": f"token {github_token}",
-        "Accept": "application/vnd.github.v3+json"
-    }
-    response = requests.get(url, headers=headers)
-
-    if response.status_code == 200:
-        # Decode the file content
-        file_content = response.json()
-        current_content = base64.b64decode(file_content["content"]).decode("utf-8")
-
-        # Remove trailing newline character if it exists
-        if current_content.endswith('\n'):
-            current_content = current_content[:-1]
+        # Read the current content of the local file
+        with open(file_path, "r") as file:
+            current_content = file.read()
 
         # Split the content into lines
         lines = current_content.split("\n")
@@ -126,7 +110,7 @@ def add_line_to_github_file(username, date):
         # Search for the username and update or add the line
         for line in lines:
             parts = line.split(", ")
-            if len(parts) == 2 and parts[0] == username:
+            if len parts == 2 and parts[0] == username:
                 try:
                     # Try to convert the number to an integer
                     Tarikh = int(parts[1])
@@ -147,28 +131,16 @@ def add_line_to_github_file(username, date):
         # Join the lines back together
         new_content = "\n".join(updated_lines)
 
-        # Encode the new content
-        new_content_encoded = base64.b64encode(new_content.encode("utf-8")).decode("utf-8")
+        # Write the updated content back to the local file
+        with open(file_path, "w") as file:
+            file.write(new_content)
 
-        # Create a commit with the updated content
-        commit_message = f"Update or add {username} on {date} in Users.txt"
-        data = {
-            "message": commit_message,
-            "content": new_content_encoded,
-            "sha": file_content["sha"]
-        }
-        response = requests.put(url, headers=headers, data=json.dumps(data))
-
-        if response.status_code == 200:
-            if Tarikh is not None:
-                print(f"Updated line for {username} on {date} in Users.txt.")
-            else:
-                print(f"Added new line for {username} on {date} in Users.txt.")
+        if Tarikh is not None:
+            print(f"Updated line for {username} on {date} in {file_path}.")
         else:
-            print("Failed to update the file.")
-    else:
-        print("Failed to retrieve the file.")
-
+            print(f"Added a new line for {username} on {date} in {file_path}.")
+    except Exception as e:
+        print(f"An error occurred: {e}")
 
 
 def remove_line_from_github_file(username):
