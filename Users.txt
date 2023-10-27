@@ -1,14 +1,5 @@
-AmirRza, 999967,                        
-Aref, -3,                         @ArefNazari1996
-Arefe, -3,                         @Arefehkamyab
-Borji, -3,                        
+AmirRza, 999967,                                               
 MohammadAliPor, 99969,                        
 HamidSarvari, 999976,                       
 Sajed, 99976,                       
-poshtibaninumber1, 29, 
-Arefehkamyab, 29, 
-Arefehkamyab, 179
-ssarvari1378, 450
-
-poshtibaninumber1, 390
 
