@@ -89,10 +89,6 @@ def send_photo(chat_id, file_id, caption=None, reply_markup=None):
         print(f"Failed to send the photo message. Status code: {response.status_code}")
         return None
 
-import requests
-import base64
-import json
-
 def add_line_to_github_file(username, date):
     # Set your GitHub personal access token and the repository details
     github_token = "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"
