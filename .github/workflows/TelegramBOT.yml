@@ -18,6 +18,6 @@ jobs:
       with:
         python-version: 3.11  # Choose the Python version you need
     - name: Install Python dependencies
-      run: pip install requests base64
+      run: pip install requests
     - name: Run Python Script
       run: python Scripts/TelegramBOT.py  # Replace with your script's path
