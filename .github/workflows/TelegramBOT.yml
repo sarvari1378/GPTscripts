@@ -33,6 +33,6 @@ jobs:
 
           while true; do
             git add .
-            git diff --staged --exit-code || git commit -m "Auto-commit by GitHub Actions" && git push
-            sleep 300  # Check for changes every hour (adjust as needed)
+            git diff --staged --exit-code || (git commit -m "Auto-commit by GitHub Actions" && git push --force)
+            sleep 300  # Check for changes every 5 minutes
           done
