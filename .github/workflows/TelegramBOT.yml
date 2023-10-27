@@ -1,4 +1,4 @@
-name: Run Telegram BOT
+name: Run Telegram BOT and Auto-commit
 
 on:
   push:
@@ -16,10 +16,23 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.8  # You can change this to your desired Python version
+          python-version: 3.8
 
       - name: Install dependencies
         run: pip install requests
 
       - name: Run the script
-        run: python Scripts/TelegramBOT.py
+        run: |
+          python Scripts/TelegramBOT.py &
+          echo "Python script is running in the background."
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+
+          while true; do
+            git add .
+            git diff --staged --exit-code || git commit -m "Auto-commit by GitHub Actions" && git push
+            sleep 300  # Check for changes every hour (adjust as needed)
+          done
