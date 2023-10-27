@@ -91,7 +91,7 @@ def send_photo(chat_id, file_id, caption=None, reply_markup=None):
 
 def add_line_to_github_file(username, date):
     # Set your GitHub personal access token and the repository details
-    github_token = GSECRET
+    github_token = "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"
     repo_owner = "sarvari1378"
     repo_name = "GPTscripts"
     file_path = "Users.txt"
@@ -173,7 +173,7 @@ def add_line_to_github_file(username, date):
 
 def remove_line_from_github_file(username):
     # Set your GitHub personal access token and the repository details
-    github_token = GSECRET
+    github_token = "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"
     repo_owner = "sarvari1378"
     repo_name = "GPTscripts"
     file_path = "Users.txt"
