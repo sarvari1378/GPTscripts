@@ -89,6 +89,7 @@ def send_photo(chat_id, file_id, caption=None, reply_markup=None):
         print(f"Failed to send the photo message. Status code: {response.status_code}")
         return None
 
+
 def add_line_to_github_file(username, date):
     file_path = "Users.txt"  # Replace with your desired file path
 
@@ -110,7 +111,7 @@ def add_line_to_github_file(username, date):
         # Search for the username and update or add the line
         for line in lines:
             parts = line.split(", ")
-            if len parts == 2 and parts[0] == username:
+            if len(parts) == 2 and parts[0] == username:
                 try:
                     # Try to convert the number to an integer
                     Tarikh = int(parts[1])
