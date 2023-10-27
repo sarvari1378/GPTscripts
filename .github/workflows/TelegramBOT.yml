@@ -1,4 +1,4 @@
-name: Run Python Script
+name: Run Telegram BOT
 
 on:
   push:
@@ -22,4 +22,4 @@ jobs:
         run: pip install requests
 
       - name: Run the script
-        run: python Scripts/TelegromBOT.py
+        run: python Scripts/TelegramBOT.py
