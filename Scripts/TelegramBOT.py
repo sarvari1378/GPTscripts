@@ -89,7 +89,6 @@ def send_photo(chat_id, file_id, caption=None, reply_markup=None):
         print(f"Failed to send the photo message. Status code: {response.status_code}")
         return None
 
-
 def add_line_to_github_file(username, date):
     file_path = "Users.txt"  # Replace with your desired file path
 
@@ -129,13 +128,17 @@ def add_line_to_github_file(username, date):
         # Add the new line
         updated_lines.append(new_line)
 
+        # Add an empty line
+        updated_lines.append("")
+
         # Join the lines back together
         new_content = "\n".join(updated_lines)
 
         # Write the updated content back to the local file
         with open(file_path, "w") as file:
             file.write(new_content)
-
+            file.write("\n")
+            
         if Tarikh is not None:
             print(f"Updated line for {username} on {date} in {file_path}.")
         else:
