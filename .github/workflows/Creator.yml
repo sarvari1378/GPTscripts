@@ -31,7 +31,10 @@ jobs:
     
     - name: Run Tuic-Creator
       run: python Scripts/TUIC-Creator.py
-    
+      
+    - name: Run SingBox-Creator
+      run: python Scripts/SingBox-Creator.py
+      
     - name: Commit and push changes
       run: |
         git config --local user.email "action@github.com"
