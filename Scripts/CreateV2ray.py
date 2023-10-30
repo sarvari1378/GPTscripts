@@ -4,6 +4,7 @@ import requests
 import regex
 from collections import namedtuple
 import os
+import jdatetime
 
 def get_config(urls):
     for url in urls:
@@ -34,7 +35,7 @@ def rename_configs(content, name):
             
             now = datetime.now(pytz.timezone('Asia/Tehran'))
             hour = now.strftime('%H:%M:%S')
-            date = now.strftime('%Y-%m-%d')
+            date = jdatetime.date.today().strftime('%Y-%m-%d')
             # Add flag to new name
             line += f'#|{flag}|{hour}|{date}|{name}|{i+1}|'
         new_lines.append(line)
