@@ -27,7 +27,7 @@ jobs:
       run: rm -rf SUB
 
     - name: Run script
-      run: python CreateV2ray.py.py  # Replace with your script's filename
+      run: python CreateV2ray.py  # Replace with your script's filename
 
     - name: Commit and push changes
       run: |
