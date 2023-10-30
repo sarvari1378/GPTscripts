@@ -1,9 +1,6 @@
 name: Run Telegram BOT and Auto-commit
 
-on:
-  push:
-    branches:
-      - main
+
 
 jobs:
   run-script:
