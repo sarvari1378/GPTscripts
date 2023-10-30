@@ -34,7 +34,7 @@ def rename_configs(content, name):
             line = line.split('#')[0]
             
             now = datetime.now(pytz.timezone('Asia/Tehran'))
-            hour = now.strftime('%H:%M:%S')
+            hour = now.strftime('%H:%M')
             date = jdatetime.date.today().strftime('%Y-%m-%d')
             # Add flag to new name
             line += f'#|{flag}|{hour}|{date}|{name}|{i+1}|'
