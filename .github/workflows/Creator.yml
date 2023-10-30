@@ -1,4 +1,4 @@
-name: Create V2ray Configs
+name: Create Configs
 
 on:
   schedule:
