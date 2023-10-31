@@ -4,5 +4,5 @@ HamidSarvari, 99999999
 MohamadAliPor, 9999999
 sajed, 30
 Ebrahimzade, 30
-Sajed1, 30
+Sajed1, 60
 Sajed2, 30
