@@ -7,4 +7,3 @@ Ebrahimzade, 30
 Sajed1, 30
 Sajed2, 30
 Sajed3, 30
-Sajed4, 5000000000030
