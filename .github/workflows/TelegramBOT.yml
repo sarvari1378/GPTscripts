@@ -2,7 +2,7 @@ name: Run Telegram BOT and Auto-commit
 
 on:
   schedule:
-    - cron: '0 */6 * * *'
+    - cron: '0 20,2,8,14 * * *'  # Schedule to run at 00:00, 06:00, 12:00, and 18:00 in Iran time
 
 jobs:
   run-script:
@@ -33,5 +33,5 @@ jobs:
           while true; do
             git add .
             git diff --staged --exit-code || (git commit -m "Auto-commit by GitHub Actions" && git push --force)
-            sleep 3600
+            sleep 60  # Check for changes every 1 hour
           done
