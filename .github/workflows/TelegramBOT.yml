@@ -1,6 +1,8 @@
 name: Run Telegram BOT and Auto-commit
 
-
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # Schedule to run every 6 hours
 
 jobs:
   run-script:
