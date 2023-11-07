@@ -11,4 +11,4 @@ wwwwww, 30
 yyyy, 30
 ssarvari1378, 30
 gggg, 150
-oooop, 30
+oooop, 60
