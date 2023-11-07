@@ -1,4 +1,4 @@
-name: creator Manual Trigger
+name: Manual Trigger
 
 on:
   workflow_dispatch:
