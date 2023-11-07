@@ -1,0 +1,42 @@
+name: creator Manual Trigger
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytz requests regex jdatetime
+
+      - name: Remove SUB directory
+        run: rm -rf SUB
+
+      - name: Run V2ray-Creator
+        run: python Scripts/CreateV2ray.py
+
+      - name: Run Tuic-Creator
+        run: python Scripts/TUIC-Creator.py
+
+      - name: Run SingBox-Creator
+        run: python Scripts/SingBox-Creator.py
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Update files" || exit 0
+          git push
