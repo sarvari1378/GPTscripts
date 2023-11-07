@@ -14,3 +14,4 @@ oooop, 60
 llll, 30
 mmmm, 90
 kkkk, 60
+cccc, 30
