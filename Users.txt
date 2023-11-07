@@ -14,4 +14,4 @@ gggg, 150
 oooop, 60
 llll, 30
 mmmm, 90
-kkkk, 30
+kkkk, 60
