@@ -110,7 +110,7 @@ def Create_SUBs(users, responses, PROTOCOL):
 
 ########################### end of functions
 
-User_url = 'https://raw.githubusercontent.com/sarvari1378/SingBOX/main/Users.txt'
+User_url = 'https://raw.githubusercontent.com/sarvari1378/GPTscripts/main/Users.txt'
 
 users = get_users(User_url)
 urls = [
