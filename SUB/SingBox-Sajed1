@@ -100,7 +100,6 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
-                "رایگان | REALITY | @EliV2ray | DE🇩🇪 | 0️⃣7️⃣",
                 "رایگان | REALITY | @reality_daily | TR🇹🇷 | 0️⃣1️⃣",
                 "رایگان | REALITY | @frev2ray | CA🇨🇦 | 0️⃣5️⃣",
                 "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣1️⃣",
@@ -144,8 +143,6 @@
                 "رایگان | REALITY | @V2Hub | Donated | LV🇱🇻 | 1️⃣6️⃣",
                 "رایگان | REALITY | @V2Hub | Donated | NO🇳🇴 | 1️⃣7️⃣",
                 "رایگان | REALITY | @V2Hub | Donated | TR🇹🇷 | 1️⃣8️⃣",
-                "رایگان | REALITY | @majidreza_rahnavard | Donated | IN🇮🇳 | 0️⃣1️⃣",
-                "رایگان | REALITY | @majidreza_rahnavard | Donated | IN🇮🇳 | 0️⃣2️⃣",
                 "رایگان | REALITY | @testreality | Donated | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @neda_aghasoltan | Donated | FR🇫🇷 | 0️⃣1️⃣",
                 "رایگان | REALITY | @shahid_ehsan(nazri) | Donated | FR🇫🇷 | 0️⃣1️⃣",
@@ -318,7 +315,6 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @EliV2ray | DE🇩🇪 | 0️⃣7️⃣",
                 "رایگان | REALITY | @reality_daily | TR🇹🇷 | 0️⃣1️⃣",
                 "رایگان | REALITY | @frev2ray | CA🇨🇦 | 0️⃣5️⃣",
                 "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣1️⃣",
@@ -362,8 +358,6 @@
                 "رایگان | REALITY | @V2Hub | Donated | LV🇱🇻 | 1️⃣6️⃣",
                 "رایگان | REALITY | @V2Hub | Donated | NO🇳🇴 | 1️⃣7️⃣",
                 "رایگان | REALITY | @V2Hub | Donated | TR🇹🇷 | 1️⃣8️⃣",
-                "رایگان | REALITY | @majidreza_rahnavard | Donated | IN🇮🇳 | 0️⃣1️⃣",
-                "رایگان | REALITY | @majidreza_rahnavard | Donated | IN🇮🇳 | 0️⃣2️⃣",
                 "رایگان | REALITY | @testreality | Donated | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @neda_aghasoltan | Donated | FR🇫🇷 | 0️⃣1️⃣",
                 "رایگان | REALITY | @shahid_ehsan(nazri) | Donated | FR🇫🇷 | 0️⃣1️⃣",
@@ -534,41 +528,6 @@
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
-        },
-        {
-            "tag": "رایگان | REALITY | @EliV2ray | DE🇩🇪 | 0️⃣7️⃣",
-            "type": "vless",
-            "server": "91.107.138.78",
-            "server_port": 50000,
-            "uuid": "e98ce689-eb18-4901-9bd2-85c6ee44231e",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "uzbo.ro",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "wRuMbGZN9HJQovIq-bPSA0wEO0MhT7CgLY8GpB5GUWI",
-                    "short_id": "82757821"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "f",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
-            }
         },
         {
             "tag": "رایگان | REALITY | @reality_daily | TR🇹🇷 | 0️⃣1️⃣",
@@ -1870,62 +1829,6 @@
                 "idle_timeout": "15s",
                 "ping_timeout": "15s",
                 "permit_without_stream": false
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @majidreza_rahnavard | Donated | IN🇮🇳 | 0️⃣1️⃣",
-            "type": "vless",
-            "server": "148.113.3.134",
-            "server_port": 443,
-            "uuid": "42bd78be-4008-4993-9575-ea62cc493362",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "ftp.debian.org",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "oMNdNFZOc6vhepLrmFankR_ucI12sjk1xV_x-aqNiUU",
-                    "short_id": "c6a9c8836de6e101"
-                }
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @majidreza_rahnavard | Donated | IN🇮🇳 | 0️⃣2️⃣",
-            "type": "vless",
-            "server": "148.113.3.134",
-            "server_port": 22,
-            "uuid": "ed52c12c-b5a4-4b2f-9caa-3de6730f2388",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "discord.com",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "oMNdNFZOc6vhepLrmFankR_ucI12sjk1xV_x-aqNiUU",
-                    "short_id": "c6a9c8836de6e101"
-                }
             }
         },
         {
