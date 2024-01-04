@@ -1,38 +1,34 @@
-name: Rozshomar
+name: Run Telegram Message Script
+
 on:
-  schedule:
-    - cron: '10 20 * * *'
+   push:
+    branches:
+      - main
+      
+   schedule:
+    - cron: '30 2 * * *'  # Runs every day at 2:30 UTC which is 6:00 AM in Iran (UTC+3:30)
+
 jobs:
-  update-users:
+  run_telegram_message_script:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
         with:
-          ref: main
-      - name: Update Users.txt
+          python-version: '3.11'  
+          
+      - name: Run Date_Modifier
         run: |
-          declare -a users
-          while IFS= read -r line; do
-            users+=("$line")
-          done < Users.txt
-          > Users.tmp
-          for user in "${users[@]}"; do
-            name=$(echo "$user" | cut -d',' -f1)
-            date=$(echo "$user" | cut -d',' -f2)
-            username=$(echo "$user" | cut -d',' -f3)
-            new_date=$((date-1))
-            if [ $new_date -ge -5 ]; then
-              echo "$name, $new_date, $username" >> Users.tmp
-            fi
-          done
-          mv Users.tmp Users.txt
-      - name: Set up git
+          python Scripts/Date_Modifier.py  
+       
+      - name: Commit and push changes
         run: |
-          git config --global user.email "you@example.com"
-          git config --global user.name "Your Name"
-      - name: Commit changes
-        run: |
-          git add Users.txt
-          git commit -m "Update Users.txt"
-          git push origin main
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Update files" || exit 0  # Exit successfully if there's nothing to commit
+          git push --force
