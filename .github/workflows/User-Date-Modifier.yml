@@ -1,26 +1,17 @@
-name: Run Rozshomar
-
+name: Rozshomar
 on:
-   push:
-    branches:
-      - main
-      
-   schedule:
-    - cron: '30 2 * * *'  # Runs every day at 2:30 UTC which is 6:00 AM in Iran (UTC+3:30)
-
+     schedule:
+     - cron: '10 20 * * *'
 jobs:
-  run_telegram_message_script:
+  update-users:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Set up Python
-        uses: actions/setup-python@v2
+      - name: Check out repository
+        uses: actions/checkout@v3
         with:
-          python-version: '3.11'  
-
+          ref: main
+     
+      
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
