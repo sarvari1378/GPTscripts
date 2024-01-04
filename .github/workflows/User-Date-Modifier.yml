@@ -1,4 +1,4 @@
-name: Run Telegram Message Script
+name: Run Rozshomar
 
 on:
    push:
