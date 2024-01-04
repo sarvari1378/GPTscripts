@@ -3,9 +3,9 @@ Borji, 5099999999932
 HamidSarvari, 99999932
 MohamadAliPor, 9999932
 Mostafa, 999945
-Sajed1, 23, @@@ssarvari1378
-Sajed2, 22
-Sajed3, 21
+Sajed1, 3, @@@ssarvari1378
+Sajed2, 2
+Sajed3, 1
 Farzan, 999997, @@@Farzansarvari
 AmirRza, 99999962
 FahimeSarvari, 99999969
