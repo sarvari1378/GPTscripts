@@ -1,12 +1,12 @@
-AmirRza, 99999961
-Borji, 5099999999931
-HamidSarvari, 99999931
-MohamadAliPor, 9999931
-Mostafa, 999944
-Sajed1, 4, @ssarvari1378
-Sajed2, 1, @ssarvari1378
-Sajed3, 0, @ssarvari1378
-Sajed3, 5, @ssarvari1378
-Farzan, 999996, @Farzansarvari
-AmirRza, 99999961
-FahimeSarvari, 99999968
+AmirRza, 99999960
+Borji, 5099999999930
+HamidSarvari, 99999930
+MohamadAliPor, 9999930
+Mostafa, 999943
+Sajed1, 3, @ssarvari1378
+Sajed2, 0, @ssarvari1378
+Sajed3, -1, @ssarvari1378
+Sajed3, 4, @ssarvari1378
+Farzan, 999995, @Farzansarvari
+AmirRza, 99999960
+FahimeSarvari, 99999967
