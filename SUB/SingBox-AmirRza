@@ -102,11 +102,13 @@
                 "URL-TEST | رایگان",
                 "رایگان | REALITY | @frev2ray | CA🇨🇦 | 0️⃣1️⃣",
                 "رایگان | REALITY | @azadi_az_inja_migzare | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | REALITY | @V2rayCollectorDonate | AU🇦🇺 | 0️⃣9️⃣",
+                "رایگان | REALITY | @V2rayCollectorDonate | AU🇦🇺 | 1️⃣5️⃣",
                 "رایگان | REALITY | @customv2ray | DE🇩🇪 | 0️⃣3️⃣",
-                "رایگان | REALITY | @ConfigsHUB | DE🇩🇪 | 0️⃣6️⃣",
+                "رایگان | REALITY | @ConfigsHUB | SE🇸🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @v2rayng_vpnrog | FR🇫🇷 | 0️⃣5️⃣",
                 "رایگان | REALITY | @Capoit | FI🇫🇮 | 0️⃣1️⃣",
-                "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣5️⃣",
+                "رایگان | REALITY | @forwardv2ray | SE🇸🇪 | 0️⃣7️⃣",
                 "رایگان | REALITY | @vpn_go67 | FI🇫🇮 | 0️⃣1️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @hadisnajafi | Donated | SE🇸🇪 | 0️⃣1️⃣",
@@ -198,11 +200,13 @@
             "outbounds": [
                 "رایگان | REALITY | @frev2ray | CA🇨🇦 | 0️⃣1️⃣",
                 "رایگان | REALITY | @azadi_az_inja_migzare | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | REALITY | @V2rayCollectorDonate | AU🇦🇺 | 0️⃣9️⃣",
+                "رایگان | REALITY | @V2rayCollectorDonate | AU🇦🇺 | 1️⃣5️⃣",
                 "رایگان | REALITY | @customv2ray | DE🇩🇪 | 0️⃣3️⃣",
-                "رایگان | REALITY | @ConfigsHUB | DE🇩🇪 | 0️⃣6️⃣",
+                "رایگان | REALITY | @ConfigsHUB | SE🇸🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @v2rayng_vpnrog | FR🇫🇷 | 0️⃣5️⃣",
                 "رایگان | REALITY | @Capoit | FI🇫🇮 | 0️⃣1️⃣",
-                "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣5️⃣",
+                "رایگان | REALITY | @forwardv2ray | SE🇸🇪 | 0️⃣7️⃣",
                 "رایگان | REALITY | @vpn_go67 | FI🇫🇮 | 0️⃣1️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @hadisnajafi | Donated | SE🇸🇪 | 0️⃣1️⃣",
@@ -355,6 +359,62 @@
             }
         },
         {
+            "tag": "رایگان | REALITY | @V2rayCollectorDonate | AU🇦🇺 | 0️⃣9️⃣",
+            "type": "vless",
+            "server": "api.rustbridge.site",
+            "server_port": 443,
+            "uuid": "3b8b1369-37b1-41a2-a8a6-95fa4c586962",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "redis-insights.easywindows.store",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "random"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "3vJzpDw1QI3vOGwaKpRrTT9KTlaz9tzQkWWPGHOSaTw",
+                    "short_id": "1828e11bb1f5c660"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @V2rayCollectorDonate | AU🇦🇺 | 1️⃣5️⃣",
+            "type": "vless",
+            "server": "api.rustbridge.site",
+            "server_port": 443,
+            "uuid": "0f2ce67a-3357-432f-b077-77f355ad8eec",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "momentsmadeeasy.com.au",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "random"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "oKi0Ug592nOWRJ2tAE_xMffJ6z76c9vv3NDovWU4MgM",
+                    "short_id": "2acc3b65d4ae54c9"
+                }
+            }
+        },
+        {
             "tag": "رایگان | REALITY | @customv2ray | DE🇩🇪 | 0️⃣3️⃣",
             "type": "vless",
             "server": "dwarvensniper.uk",
@@ -383,11 +443,11 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @ConfigsHUB | DE🇩🇪 | 0️⃣6️⃣",
+            "tag": "رایگان | REALITY | @ConfigsHUB | SE🇸🇪 | 0️⃣1️⃣",
             "type": "vless",
-            "server": "free01.miraclev2ray.online",
+            "server": "16.171.53.57",
             "server_port": 443,
-            "uuid": "1b74db67-4a86-4f61-ab2f-72e4d38cbed0",
+            "uuid": "2c59ff33-916d-459b-a4c0-8b7432c4c3bb",
             "flow": "xtls-rprx-vision",
             "packet_encoding": "xudp",
             "multiplex": {
@@ -397,7 +457,7 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "free-api01.miraclev2ray.online",
+                "server_name": "coinmarketcap.com",
                 "insecure": false,
                 "utls": {
                     "enabled": true,
@@ -405,8 +465,8 @@
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "8fQWsJr0l6n5x98oArx-3a1IO3elnrrHOHZorOyFSHw",
-                    "short_id": "4189a3adbea837f0"
+                    "public_key": "VghMH03LmbVepqt4Czo8qQuIoRNKDdGsb8TQC0vZh3A",
+                    "short_id": "1db3"
                 }
             }
         },
@@ -481,11 +541,11 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣5️⃣",
+            "tag": "رایگان | REALITY | @forwardv2ray | SE🇸🇪 | 0️⃣7️⃣",
             "type": "vless",
-            "server": "5.75.200.225",
-            "server_port": 52881,
-            "uuid": "09eb5c0d-8e59-4428-ac45-93cdd522a143",
+            "server": "13.50.15.32",
+            "server_port": 443,
+            "uuid": "2c59ff33-916d-459b-a4c0-8b7432c4c3bb",
             "flow": "xtls-rprx-vision",
             "packet_encoding": "xudp",
             "multiplex": {
@@ -495,16 +555,16 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "discord.com",
+                "server_name": "coinmarketcap.com",
                 "insecure": false,
                 "utls": {
                     "enabled": true,
-                    "fingerprint": "firefox"
+                    "fingerprint": "chrome"
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "xatmYKQWUBDL2t3b3lh9eUfzhRbVzlXANsGrtiLLc3U",
-                    "short_id": "df257c60"
+                    "public_key": "k7St9Xcx7CAq3AMnn4Z5jYtfoeKaeXiL0ecx4ekaNEI",
+                    "short_id": "1db3"
                 }
             }
         },
