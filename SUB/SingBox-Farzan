@@ -183,8 +183,7 @@
                 "رایگان | REALITY | @Nika_Shakarami | Donated | US🇺🇸 | 4️⃣9️⃣",
                 "رایگان | REALITY | @Nika_Shakarami | Donated | US🇺🇸 | 5️⃣0️⃣",
                 "رایگان | REALITY | @Nika_Shakarami | Donated | SE🇸🇪 | 5️⃣1️⃣",
-                "رایگان | REALITY | @Nika_Shakarami | Donated | SE🇸🇪 | 5️⃣3️⃣",
-                "رایگان | REALITY | @Nika_Shakarami | Donated | SE🇸🇪 | 5️⃣7️⃣"
+                "رایگان | REALITY | @Nika_Shakarami | Donated | SE🇸🇪 | 5️⃣3️⃣"
             ]
         },
         {
@@ -274,8 +273,7 @@
                 "رایگان | REALITY | @Nika_Shakarami | Donated | US🇺🇸 | 4️⃣9️⃣",
                 "رایگان | REALITY | @Nika_Shakarami | Donated | US🇺🇸 | 5️⃣0️⃣",
                 "رایگان | REALITY | @Nika_Shakarami | Donated | SE🇸🇪 | 5️⃣1️⃣",
-                "رایگان | REALITY | @Nika_Shakarami | Donated | SE🇸🇪 | 5️⃣3️⃣",
-                "رایگان | REALITY | @Nika_Shakarami | Donated | SE🇸🇪 | 5️⃣7️⃣"
+                "رایگان | REALITY | @Nika_Shakarami | Donated | SE🇸🇪 | 5️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -2670,34 +2668,6 @@
             "tls": {
                 "enabled": true,
                 "server_name": "speed.cloudflare.com",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "1yjMDe_3ZcrJDc4fGqWPmy-udJRLW502p2EjplmCWx8",
-                    "short_id": "76753364"
-                }
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @Nika_Shakarami | Donated | SE🇸🇪 | 5️⃣7️⃣",
-            "type": "vless",
-            "server": "5.42.86.225",
-            "server_port": 6280,
-            "uuid": "cc1e73d6-283a-4c35-8b8c-72fb8f43e25c",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "blogs.windows.com",
                 "insecure": false,
                 "utls": {
                     "enabled": true,
