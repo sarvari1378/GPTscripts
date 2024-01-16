@@ -107,7 +107,6 @@
                 "رایگان | REALITY | @v2rayNG_Matsuri | SE🇸🇪 | 0️⃣5️⃣",
                 "رایگان | REALITY | @v2rayNG_Matsuri | SE🇸🇪 | 0️⃣6️⃣",
                 "رایگان | REALITY | @v2rayNG_Matsuri | SE🇸🇪 | 0️⃣7️⃣",
-                "رایگان | REALITY | @ConfigsHUB | DE🇩🇪 | 0️⃣6️⃣",
                 "رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣3️⃣",
@@ -205,7 +204,6 @@
                 "رایگان | REALITY | @v2rayNG_Matsuri | SE🇸🇪 | 0️⃣5️⃣",
                 "رایگان | REALITY | @v2rayNG_Matsuri | SE🇸🇪 | 0️⃣6️⃣",
                 "رایگان | REALITY | @v2rayNG_Matsuri | SE🇸🇪 | 0️⃣7️⃣",
-                "رایگان | REALITY | @ConfigsHUB | DE🇩🇪 | 0️⃣6️⃣",
                 "رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣3️⃣",
@@ -488,34 +486,6 @@
                     "enabled": true,
                     "public_key": "2zSYUOism9qalRDrRZ4-Wv36T698NRi5HXvTMOxIWkI",
                     "short_id": "214229"
-                }
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @ConfigsHUB | DE🇩🇪 | 0️⃣6️⃣",
-            "type": "vless",
-            "server": "test1.meysi.top",
-            "server_port": 443,
-            "uuid": "37d3cc2d-7e6d-4c86-a247-f36831b6331e",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "yahoo.com",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "k4-YSCMWQsJgT31fv29Rprf2pVMMz8sxCObHEG4w1RU",
-                    "short_id": "004e0af4"
                 }
             }
         },
