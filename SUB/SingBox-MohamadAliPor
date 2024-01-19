@@ -100,7 +100,7 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
-                "رایگان | REALITY | @VmessProtocol | HK🇭🇰 | 0️⃣2️⃣",
+                "رایگان | REALITY | @VmessProtocol | HK🇭🇰 | 0️⃣6️⃣",
                 "رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @Outlinev2rayNG | AU🇦🇺 | 0️⃣2️⃣",
                 "رایگان | REALITY | @vpn_go67 | FI🇫🇮 | 0️⃣1️⃣"
@@ -110,7 +110,7 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @VmessProtocol | HK🇭🇰 | 0️⃣2️⃣",
+                "رایگان | REALITY | @VmessProtocol | HK🇭🇰 | 0️⃣6️⃣",
                 "رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @Outlinev2rayNG | AU🇦🇺 | 0️⃣2️⃣",
                 "رایگان | REALITY | @vpn_go67 | FI🇫🇮 | 0️⃣1️⃣"
@@ -120,7 +120,7 @@
             "tolerance": 50
         },
         {
-            "tag": "رایگان | REALITY | @VmessProtocol | HK🇭🇰 | 0️⃣2️⃣",
+            "tag": "رایگان | REALITY | @VmessProtocol | HK🇭🇰 | 0️⃣6️⃣",
             "type": "vless",
             "server": "91.229.132.132",
             "server_port": 443,
