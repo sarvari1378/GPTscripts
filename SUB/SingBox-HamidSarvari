@@ -100,7 +100,7 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
-                "رایگان | REALITY | @EliV2ray | TR🇹🇷 | 0️⃣3️⃣",
+                "رایگان | REALITY | @EliV2ray | TR🇹🇷 | 0️⃣5️⃣",
                 "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣7️⃣",
                 "رایگان | REALITY | @flyv2ray | GB🇬🇧 | 0️⃣7️⃣",
                 "رایگان | REALITY | @forwardv2ray | FI🇫🇮 | 0️⃣6️⃣",
@@ -113,7 +113,7 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @EliV2ray | TR🇹🇷 | 0️⃣3️⃣",
+                "رایگان | REALITY | @EliV2ray | TR🇹🇷 | 0️⃣5️⃣",
                 "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣7️⃣",
                 "رایگان | REALITY | @flyv2ray | GB🇬🇧 | 0️⃣7️⃣",
                 "رایگان | REALITY | @forwardv2ray | FI🇫🇮 | 0️⃣6️⃣",
@@ -126,7 +126,7 @@
             "tolerance": 50
         },
         {
-            "tag": "رایگان | REALITY | @EliV2ray | TR🇹🇷 | 0️⃣3️⃣",
+            "tag": "رایگان | REALITY | @EliV2ray | TR🇹🇷 | 0️⃣5️⃣",
             "type": "vless",
             "server": "84.32.230.81",
             "server_port": 443,
@@ -226,41 +226,6 @@
         {
             "tag": "رایگان | REALITY | @forwardv2ray | FI🇫🇮 | 0️⃣6️⃣",
             "type": "vless",
-            "server": "footlo.argha-v2pedia.monster",
-            "server_port": 443,
-            "uuid": "6ad624f4-c1e0-4911-e3fd-f0e9d797991b",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "tuyacn.com",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "muEtUEPnEMopCqdrhYWMzzwBsAfjZ_NV1m-AnO1byxk",
-                    "short_id": "da"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "Telegram:@v2pedia,Telegram:@v2pedia,Telegram:@v2pedia,Telegram:@v2pedia,Telegram:@v2pedia,Telegram:@v2pedia,Telegram:@v2pedia,Telegram:@v2pedia",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @forwardv2ray | FI🇫🇮 | 0️⃣7️⃣",
-            "type": "vless",
             "server": "95.216.170.113",
             "server_port": 443,
             "uuid": "691a087a-f23c-4162-99f5-6d3270a08108",
@@ -288,6 +253,41 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "@ipV2Ray",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @forwardv2ray | FI🇫🇮 | 0️⃣7️⃣",
+            "type": "vless",
+            "server": "footlo.argha-v2pedia.monster",
+            "server_port": 443,
+            "uuid": "6ad624f4-c1e0-4911-e3fd-f0e9d797991b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "tuyacn.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "muEtUEPnEMopCqdrhYWMzzwBsAfjZ_NV1m-AnO1byxk",
+                    "short_id": "da"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "Telegram:@v2pedia,Telegram:@v2pedia,Telegram:@v2pedia,Telegram:@v2pedia,Telegram:@v2pedia,Telegram:@v2pedia,Telegram:@v2pedia,Telegram:@v2pedia",
                 "idle_timeout": "15s",
                 "ping_timeout": "15s",
                 "permit_without_stream": false
