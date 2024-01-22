@@ -101,9 +101,9 @@
             "outbounds": [
                 "URL-TEST | رایگان",
                 "رایگان | REALITY | @v2logy | DE🇩🇪 | 0️⃣3️⃣",
-                "رایگان | REALITY | @V2RayTz | DE🇩🇪 | 0️⃣4️⃣",
                 "رایگان | REALITY | @DailyV2RY | DE🇩🇪 | 0️⃣7️⃣",
-                "رایگان | REALITY | @proxystore11 | FI🇫🇮 | 0️⃣1️⃣",
+                "رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣1️⃣",
+                "رایگان | REALITY | @forwardv2ray | FI🇫🇮 | 0️⃣6️⃣",
                 "رایگان | REALITY | @TIKTOK_PROXY | FI🇫🇮 | 0️⃣3️⃣"
             ]
         },
@@ -112,9 +112,9 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @v2logy | DE🇩🇪 | 0️⃣3️⃣",
-                "رایگان | REALITY | @V2RayTz | DE🇩🇪 | 0️⃣4️⃣",
                 "رایگان | REALITY | @DailyV2RY | DE🇩🇪 | 0️⃣7️⃣",
-                "رایگان | REALITY | @proxystore11 | FI🇫🇮 | 0️⃣1️⃣",
+                "رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣1️⃣",
+                "رایگان | REALITY | @forwardv2ray | FI🇫🇮 | 0️⃣6️⃣",
                 "رایگان | REALITY | @TIKTOK_PROXY | FI🇫🇮 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -157,41 +157,6 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @V2RayTz | DE🇩🇪 | 0️⃣4️⃣",
-            "type": "vless",
-            "server": "5.75.215.94",
-            "server_port": 29318,
-            "uuid": "09171731-ade1-4e64-89cf-63fdc870b348",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "account.zula.ir",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "_d6RXVbNl72vSoyPb23NcU2Oqo-2idKyeg_hESpEtXc",
-                    "short_id": "49b497ba"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "@MainV2ry,@MainV2ry,@MainV2ry,@MainV2ry,@MainV2ry,@MainV2ry,@MainV2ry,@MainV2ry,@MainV2ry,@MainV2ry,@MainV2ry,@MainV2ry,@MainV2ry",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
-            }
-        },
-        {
             "tag": "رایگان | REALITY | @DailyV2RY | DE🇩🇪 | 0️⃣7️⃣",
             "type": "vless",
             "server": "49.13.62.154",
@@ -227,12 +192,12 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @proxystore11 | FI🇫🇮 | 0️⃣1️⃣",
+            "tag": "رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣1️⃣",
             "type": "vless",
-            "server": "finland.notmmdg.com",
-            "server_port": 8443,
-            "uuid": "e15f76e9-870d-4237-b4f0-7d403fa9f31c",
-            "flow": "xtls-rprx-vision",
+            "server": "49.13.72.241",
+            "server_port": 443,
+            "uuid": "ac4ca222-1c50-4f96-bd13-7a9498f8ea28",
+            "flow": "",
             "packet_encoding": "xudp",
             "multiplex": {
                 "enabled": false,
@@ -241,17 +206,59 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "notmmdg.com",
+                "server_name": "greenpepper.ir",
                 "insecure": false,
                 "utls": {
                     "enabled": true,
-                    "fingerprint": "chrome"
+                    "fingerprint": "firefox"
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-                    "short_id": ""
+                    "public_key": "pj7hhjVTqfsjNw7vIMQFwT6nzdbHLNAyUveeRhv5vw4",
+                    "short_id": "0960546b"
                 }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@Fnet00",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @forwardv2ray | FI🇫🇮 | 0️⃣6️⃣",
+            "type": "vless",
+            "server": "95.217.165.237",
+            "server_port": 443,
+            "uuid": "362b4ce4-aafe-4b9b-a6a3-01a63abbbfc0",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "greenpepper.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "sCISqS8-2p5yxMf587SprLh9VhwqtWfZFfBrjqotLmQ",
+                    "short_id": "0aa7423a"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@ipV2Ray",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
             }
         },
         {
