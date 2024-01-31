@@ -103,12 +103,11 @@
                 "رایگان | REALITY | @EliV2ray | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @v2logy | GB🇬🇧 | 0️⃣6️⃣",
                 "رایگان | REALITY | @azadi_az_inja_migzare | DE🇩🇪 | 0️⃣3️⃣",
-                "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣7️⃣",
+                "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣5️⃣",
                 "رایگان | REALITY | @Outlinev2rayNG | SE🇸🇪 | 0️⃣2️⃣",
-                "رایگان | REALITY | @Capital_NET | FI🇫🇮 | 0️⃣1️⃣",
                 "رایگان | REALITY | @Capoit | DE🇩🇪 | 0️⃣3️⃣",
-                "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣1️⃣",
-                "رایگان | REALITY | @proxy_mtm | DE🇩🇪 | 0️⃣5️⃣"
+                "رایگان | REALITY | @proxy_mtm | DE🇩🇪 | 0️⃣5️⃣",
+                "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
             ]
         },
         {
@@ -118,12 +117,11 @@
                 "رایگان | REALITY | @EliV2ray | DE🇩🇪 | 0️⃣1️⃣",
                 "رایگان | REALITY | @v2logy | GB🇬🇧 | 0️⃣6️⃣",
                 "رایگان | REALITY | @azadi_az_inja_migzare | DE🇩🇪 | 0️⃣3️⃣",
-                "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣7️⃣",
+                "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣5️⃣",
                 "رایگان | REALITY | @Outlinev2rayNG | SE🇸🇪 | 0️⃣2️⃣",
-                "رایگان | REALITY | @Capital_NET | FI🇫🇮 | 0️⃣1️⃣",
                 "رایگان | REALITY | @Capoit | DE🇩🇪 | 0️⃣3️⃣",
-                "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣1️⃣",
-                "رایگان | REALITY | @proxy_mtm | DE🇩🇪 | 0️⃣5️⃣"
+                "رایگان | REALITY | @proxy_mtm | DE🇩🇪 | 0️⃣5️⃣",
+                "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -214,7 +212,7 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣7️⃣",
+            "tag": "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣5️⃣",
             "type": "vless",
             "server": "116.202.99.47",
             "server_port": 49124,
@@ -277,41 +275,6 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @Capital_NET | FI🇫🇮 | 0️⃣1️⃣",
-            "type": "vless",
-            "server": "tel.1lagvpn13.cfd",
-            "server_port": 443,
-            "uuid": "9eb0967f-8c35-4aa5-b6be-a2e46f4c2348",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "gsmarena.com",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "uX1V5lrEbOrtXi-2dQyPNVJ6sf80g19HYujUUWN5nxA",
-                    "short_id": "464f8607"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "@LAGVPN13",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
-            }
-        },
-        {
             "tag": "رایگان | REALITY | @Capoit | DE🇩🇪 | 0️⃣3️⃣",
             "type": "vless",
             "server": "78.47.198.99",
@@ -347,34 +310,6 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣1️⃣",
-            "type": "vless",
-            "server": "51.75.86.63",
-            "server_port": 443,
-            "uuid": "974d4696-a900-4d44-b627-9833b8a7b27a",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "flightradar24.com",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "edge"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "UDABcxpKzAYkuyE4pmST0OSzEUJpQNuSgYIKcgppeh8",
-                    "short_id": "d73382b02fa94fc2"
-                }
-            }
-        },
-        {
             "tag": "رایگان | REALITY | @proxy_mtm | DE🇩🇪 | 0️⃣5️⃣",
             "type": "vless",
             "server": "munich.butterfly-galaxy.com",
@@ -399,6 +334,34 @@
                     "enabled": true,
                     "public_key": "yiHA11T4BplJbQxAfsQkiiAzAmyxWau-KR7dQptwjDU",
                     "short_id": "c741ad33"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣",
+            "type": "vless",
+            "server": "51.75.86.63",
+            "server_port": 443,
+            "uuid": "974d4696-a900-4d44-b627-9833b8a7b27a",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "flightradar24.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "edge"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "UDABcxpKzAYkuyE4pmST0OSzEUJpQNuSgYIKcgppeh8",
+                    "short_id": "d73382b02fa94fc2"
                 }
             }
         },
