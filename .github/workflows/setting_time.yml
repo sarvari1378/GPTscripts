@@ -1,0 +1,23 @@
+name: Set Timezone and Run Code
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  set_timezone_and_run_code:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set Timezone
+      run: |
+        sudo timedatectl set-timezone Asia/Tehran
+        date
+
+    - name: Run Python Script
+      run: |
+        python your_script.py
