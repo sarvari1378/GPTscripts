@@ -17,3 +17,6 @@ jobs:
       run: |
         sudo timedatectl set-timezone Asia/Tehran
         date
+    - name: Run Python Script
+      run: |
+        python Scripts/Telegram_Random_time.py
