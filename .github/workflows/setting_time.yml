@@ -17,7 +17,3 @@ jobs:
       run: |
         sudo timedatectl set-timezone Asia/Tehran
         date
-
-    - name: Run Python Script
-      run: |
-        python your_script.py
