@@ -100,13 +100,14 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
-                "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣1️⃣",
+                "رایگان | REALITY | @ipV2Ray | FI🇫🇮 | 0️⃣2️⃣",
+                "رایگان | REALITY | @ARv2ray | CA🇨🇦 | 0️⃣2️⃣",
                 "رایگان | REALITY | @ARv2ray | CA🇨🇦 | 0️⃣4️⃣",
-                "رایگان | REALITY | @V2rayCollectorDonate | TR🇹🇷 | 0️⃣3️⃣",
+                "رایگان | REALITY | @V2rayCollectorDonate | TR🇹🇷 | 0️⃣4️⃣",
                 "رایگان | REALITY | @ShadowProxy66 | DE🇩🇪 | 0️⃣5️⃣",
                 "رایگان | REALITY | @ShadowProxy66 | DE🇩🇪 | 0️⃣6️⃣",
                 "رایگان | REALITY | @ShadowProxy66 | DE🇩🇪 | 0️⃣7️⃣",
-                "رایگان | REALITY | @V2RayTz | DE🇩🇪 | 0️⃣3️⃣",
+                "رایگان | REALITY | @DailyV2RY | CA🇨🇦 | 0️⃣7️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
             ]
         },
@@ -114,13 +115,14 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣1️⃣",
+                "رایگان | REALITY | @ipV2Ray | FI🇫🇮 | 0️⃣2️⃣",
+                "رایگان | REALITY | @ARv2ray | CA🇨🇦 | 0️⃣2️⃣",
                 "رایگان | REALITY | @ARv2ray | CA🇨🇦 | 0️⃣4️⃣",
-                "رایگان | REALITY | @V2rayCollectorDonate | TR🇹🇷 | 0️⃣3️⃣",
+                "رایگان | REALITY | @V2rayCollectorDonate | TR🇹🇷 | 0️⃣4️⃣",
                 "رایگان | REALITY | @ShadowProxy66 | DE🇩🇪 | 0️⃣5️⃣",
                 "رایگان | REALITY | @ShadowProxy66 | DE🇩🇪 | 0️⃣6️⃣",
                 "رایگان | REALITY | @ShadowProxy66 | DE🇩🇪 | 0️⃣7️⃣",
-                "رایگان | REALITY | @V2RayTz | DE🇩🇪 | 0️⃣3️⃣",
+                "رایگان | REALITY | @DailyV2RY | CA🇨🇦 | 0️⃣7️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -128,9 +130,44 @@
             "tolerance": 50
         },
         {
-            "tag": "رایگان | REALITY | @ARv2ray | DE🇩🇪 | 0️⃣1️⃣",
+            "tag": "رایگان | REALITY | @ipV2Ray | FI🇫🇮 | 0️⃣2️⃣",
             "type": "vless",
-            "server": "49.13.45.110",
+            "server": "95.217.208.245",
+            "server_port": 443,
+            "uuid": "2b2e85fd-fb5f-4050-8af3-dc5b168fdf4e",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "*.gsmarena.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "ghLIwaKG9GWJLEV7PxdHKkW4a37QBfa30A0tufmJ6zw",
+                    "short_id": "849f8532"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@ipV2Ray",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @ARv2ray | CA🇨🇦 | 0️⃣2️⃣",
+            "type": "vless",
+            "server": "v2ti.fun",
             "server_port": 443,
             "uuid": "telegram-id-ArV2ray",
             "flow": "",
@@ -142,7 +179,7 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "dnschecker.org",
+                "server_name": "asemooni.com",
                 "insecure": false,
                 "utls": {
                     "enabled": true,
@@ -150,8 +187,8 @@
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "6iuyIVtM48HTcI_TB1aS3WEVAiWItqoJplB8ecu5DE0",
-                    "short_id": "6909866b"
+                    "public_key": "-BlL2lhzcC91LjlugHYgGF61X3tH3gVhyfNuG6tQVio",
+                    "short_id": "287fd726"
                 }
             },
             "transport": {
@@ -198,7 +235,7 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @V2rayCollectorDonate | TR🇹🇷 | 0️⃣3️⃣",
+            "tag": "رایگان | REALITY | @V2rayCollectorDonate | TR🇹🇷 | 0️⃣4️⃣",
             "type": "vless",
             "server": "193.124.46.68",
             "server_port": 443,
@@ -310,9 +347,9 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @V2RayTz | DE🇩🇪 | 0️⃣3️⃣",
+            "tag": "رایگان | REALITY | @DailyV2RY | CA🇨🇦 | 0️⃣7️⃣",
             "type": "vless",
-            "server": "167.235.108.53",
+            "server": "v2ti.fun",
             "server_port": 443,
             "uuid": "telegram-id-ArV2ray",
             "flow": "",
@@ -324,7 +361,7 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "greenpepper.ir",
+                "server_name": "asemooni.com",
                 "insecure": false,
                 "utls": {
                     "enabled": true,
@@ -332,8 +369,8 @@
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "BQN4GKJY1sknMYl0ey0doDYsJyGu82xpM9HT3isxUw4",
-                    "short_id": "bbf291d0"
+                    "public_key": "xH7abqCI9aYGthLZjbpkGuznvYb0BANH8hDMNgdiVxk",
+                    "short_id": "c98b4712"
                 }
             },
             "transport": {
