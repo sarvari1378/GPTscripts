@@ -100,12 +100,8 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
-                "رایگان | REALITY | @V2rayCollectorDonate | TR🇹🇷 | 0️⃣6️⃣",
-                "رایگان | REALITY | @v2ray_swhil | DE🇩🇪 | 0️⃣4️⃣",
-                "رایگان | REALITY | @v2ray_swhil | FI🇫🇮 | 0️⃣5️⃣",
-                "رایگان | REALITY | @v2ray_swhil | US🇺🇸 | 0️⃣6️⃣",
-                "رایگان | REALITY | @v2ray_swhil | GB🇬🇧 | 0️⃣7️⃣",
-                "رایگان | REALITY | @forwardv2ray | FR🇫🇷 | 0️⃣3️⃣",
+                "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣4️⃣",
+                "رایگان | REALITY | @V2rayCollectorDonate | TR🇹🇷 | 1️⃣2️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
             ]
         },
@@ -113,12 +109,8 @@
             "tag": "URL-TEST | رایگان",
             "type": "urltest",
             "outbounds": [
-                "رایگان | REALITY | @V2rayCollectorDonate | TR🇹🇷 | 0️⃣6️⃣",
-                "رایگان | REALITY | @v2ray_swhil | DE🇩🇪 | 0️⃣4️⃣",
-                "رایگان | REALITY | @v2ray_swhil | FI🇫🇮 | 0️⃣5️⃣",
-                "رایگان | REALITY | @v2ray_swhil | US🇺🇸 | 0️⃣6️⃣",
-                "رایگان | REALITY | @v2ray_swhil | GB🇬🇧 | 0️⃣7️⃣",
-                "رایگان | REALITY | @forwardv2ray | FR🇫🇷 | 0️⃣3️⃣",
+                "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣4️⃣",
+                "رایگان | REALITY | @V2rayCollectorDonate | TR🇹🇷 | 1️⃣2️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -126,7 +118,35 @@
             "tolerance": 50
         },
         {
-            "tag": "رایگان | REALITY | @V2rayCollectorDonate | TR🇹🇷 | 0️⃣6️⃣",
+            "tag": "رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣4️⃣",
+            "type": "vless",
+            "server": "5.75.196.185",
+            "server_port": 443,
+            "uuid": "0acf46b6-fc2b-4f73-a936-81285f5ed7e4",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "www.zula.ir",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "tVVmkXcGLwT2v9vc-m2388mc7z6J8GDyy8gYUe1MhV4",
+                    "short_id": "d035a4e345793f9b"
+                }
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @V2rayCollectorDonate | TR🇹🇷 | 1️⃣2️⃣",
             "type": "vless",
             "server": "193.124.46.68",
             "server_port": 443,
@@ -151,181 +171,6 @@
                     "public_key": "ihyTs51u6z63GEvubkvH30ySgk3Vi3hV0b6fVmZJPF0",
                     "short_id": "27fd55f5"
                 }
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @v2ray_swhil | DE🇩🇪 | 0️⃣4️⃣",
-            "type": "vless",
-            "server": "germany.mmdtitaniom.com",
-            "server_port": 2053,
-            "uuid": "fafcd6a9-07b2-4185-a4e8-a2e5abf8035c",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "www.sourceforge.net",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-                    "short_id": ""
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "Telegram:@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @v2ray_swhil | FI🇫🇮 | 0️⃣5️⃣",
-            "type": "vless",
-            "server": "Finland.v2rayngz.com",
-            "server_port": 2087,
-            "uuid": "fafcd6a9-07b2-4185-a4e8-a2e5abf8035c",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "sourceforge.net",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-                    "short_id": ""
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "Telegram:@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @v2ray_swhil | US🇺🇸 | 0️⃣6️⃣",
-            "type": "vless",
-            "server": "usa.mmdgogoli.top",
-            "server_port": 2096,
-            "uuid": "fafcd6a9-07b2-4185-a4e8-a2e5abf8035c",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "sourceforge.net",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-                    "short_id": ""
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "Telegram:@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @v2ray_swhil | GB🇬🇧 | 0️⃣7️⃣",
-            "type": "vless",
-            "server": "England.kamimiller.top",
-            "server_port": 8443,
-            "uuid": "fafcd6a9-07b2-4185-a4e8-a2e5abf8035c",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "sourceforge.net",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-                    "short_id": ""
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "Telegram:@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @forwardv2ray | FR🇫🇷 | 0️⃣3️⃣",
-            "type": "vless",
-            "server": "95.179.210.218",
-            "server_port": 443,
-            "uuid": "ItsLegendaryking",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "mane.com",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "DpVsT1XPvwuxQsq4r2lE1JgP-0-vAykbf627RWxNr0M",
-                    "short_id": "a5b56375"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "\/Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers-Telegram:@LegenderY_Servers",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
             }
         },
         {
