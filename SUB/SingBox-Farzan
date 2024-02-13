@@ -101,14 +101,12 @@
             "outbounds": [
                 "URL-TEST | رایگان",
                 "رایگان | REALITY | @proxy_kafee | US🇺🇸 | 0️⃣1️⃣",
-                "رایگان | REALITY | @V2rayCollectorDonate | FI🇫🇮 | 0️⃣7️⃣",
-                "رایگان | REALITY | @V2rayCollectorDonate | FI🇫🇮 | 1️⃣5️⃣",
+                "رایگان | REALITY | @proxy_kafee | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | REALITY | @V2rayCollectorDonate | FI🇫🇮 | 0️⃣8️⃣",
+                "رایگان | REALITY | @V2rayCollectorDonate | FI🇫🇮 | 1️⃣6️⃣",
                 "رایگان | REALITY | @FalconPolV2rayNG | DE🇩🇪 | 0️⃣1️⃣",
-                "رایگان | REALITY | @v2ray_swhil | FI🇫🇮 | 0️⃣1️⃣",
-                "رایگان | REALITY | @v2ray_swhil | US🇺🇸 | 0️⃣2️⃣",
-                "رایگان | REALITY | @v2ray_swhil | GB🇬🇧 | 0️⃣3️⃣",
-                "رایگان | REALITY | @flyv2ray | DE🇩🇪 | 0️⃣4️⃣",
-                "رایگان | REALITY | @flyv2ray | NL🇳🇱 | 0️⃣5️⃣",
+                "رایگان | REALITY | @flyv2ray | US🇺🇸 | 0️⃣1️⃣",
+                "رایگان | REALITY | @flyv2ray | DE🇩🇪 | 0️⃣7️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
             ]
         },
@@ -117,14 +115,12 @@
             "type": "urltest",
             "outbounds": [
                 "رایگان | REALITY | @proxy_kafee | US🇺🇸 | 0️⃣1️⃣",
-                "رایگان | REALITY | @V2rayCollectorDonate | FI🇫🇮 | 0️⃣7️⃣",
-                "رایگان | REALITY | @V2rayCollectorDonate | FI🇫🇮 | 1️⃣5️⃣",
+                "رایگان | REALITY | @proxy_kafee | DE🇩🇪 | 0️⃣2️⃣",
+                "رایگان | REALITY | @V2rayCollectorDonate | FI🇫🇮 | 0️⃣8️⃣",
+                "رایگان | REALITY | @V2rayCollectorDonate | FI🇫🇮 | 1️⃣6️⃣",
                 "رایگان | REALITY | @FalconPolV2rayNG | DE🇩🇪 | 0️⃣1️⃣",
-                "رایگان | REALITY | @v2ray_swhil | FI🇫🇮 | 0️⃣1️⃣",
-                "رایگان | REALITY | @v2ray_swhil | US🇺🇸 | 0️⃣2️⃣",
-                "رایگان | REALITY | @v2ray_swhil | GB🇬🇧 | 0️⃣3️⃣",
-                "رایگان | REALITY | @flyv2ray | DE🇩🇪 | 0️⃣4️⃣",
-                "رایگان | REALITY | @flyv2ray | NL🇳🇱 | 0️⃣5️⃣",
+                "رایگان | REALITY | @flyv2ray | US🇺🇸 | 0️⃣1️⃣",
+                "رایگان | REALITY | @flyv2ray | DE🇩🇪 | 0️⃣7️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -167,7 +163,42 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @V2rayCollectorDonate | FI🇫🇮 | 0️⃣7️⃣",
+            "tag": "رایگان | REALITY | @proxy_kafee | DE🇩🇪 | 0️⃣2️⃣",
+            "type": "vless",
+            "server": "49.13.149.114",
+            "server_port": 443,
+            "uuid": "021e1111-e6d9-4f6c-a1b8-03a70b6e4540",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "*.nareezacademy.com",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "gqIyM6we26p1RDqHL-X9iB7OEkNVTf5M1-hZ85bukSI",
+                    "short_id": "23e8beee"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@ipV2Ray",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
+            }
+        },
+        {
+            "tag": "رایگان | REALITY | @V2rayCollectorDonate | FI🇫🇮 | 0️⃣8️⃣",
             "type": "vless",
             "server": "finland.nodes.mrzb.artydev.ru",
             "server_port": 8443,
@@ -195,7 +226,7 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @V2rayCollectorDonate | FI🇫🇮 | 1️⃣5️⃣",
+            "tag": "رایگان | REALITY | @V2rayCollectorDonate | FI🇫🇮 | 1️⃣6️⃣",
             "type": "vless",
             "server": "135.181.249.82",
             "server_port": 443,
@@ -265,11 +296,11 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @v2ray_swhil | FI🇫🇮 | 0️⃣1️⃣",
+            "tag": "رایگان | REALITY | @flyv2ray | US🇺🇸 | 0️⃣1️⃣",
             "type": "vless",
-            "server": "Finland.v2rayngz.com",
-            "server_port": 2087,
-            "uuid": "fafcd6a9-07b2-4185-a4e8-a2e5abf8035c",
+            "server": "5.161.111.235",
+            "server_port": 25365,
+            "uuid": "44f3f9d5-4d4f-4090-8300-c74950118251",
             "flow": "",
             "packet_encoding": "xudp",
             "multiplex": {
@@ -283,94 +314,24 @@
                 "insecure": false,
                 "utls": {
                     "enabled": true,
-                    "fingerprint": "firefox"
+                    "fingerprint": "chrome"
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-                    "short_id": ""
+                    "public_key": "0Qi5_qb1aKCGax2eaV6mVx_-C8Ld7KDaKnSDAinpRgc",
+                    "short_id": "eda784ac"
                 }
             },
             "transport": {
                 "type": "grpc",
-                "service_name": "Telegram:@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official",
+                "service_name": "@ZEDMODEON",
                 "idle_timeout": "15s",
                 "ping_timeout": "15s",
                 "permit_without_stream": false
             }
         },
         {
-            "tag": "رایگان | REALITY | @v2ray_swhil | US🇺🇸 | 0️⃣2️⃣",
-            "type": "vless",
-            "server": "usa.mmdgogoli.top",
-            "server_port": 2096,
-            "uuid": "fafcd6a9-07b2-4185-a4e8-a2e5abf8035c",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "sourceforge.net",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-                    "short_id": ""
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "Telegram:@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @v2ray_swhil | GB🇬🇧 | 0️⃣3️⃣",
-            "type": "vless",
-            "server": "England.kamimiller.top",
-            "server_port": 8443,
-            "uuid": "fafcd6a9-07b2-4185-a4e8-a2e5abf8035c",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "sourceforge.net",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-                    "short_id": ""
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "Telegram:@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official,@Titaniom_Official",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @flyv2ray | DE🇩🇪 | 0️⃣4️⃣",
+            "tag": "رایگان | REALITY | @flyv2ray | DE🇩🇪 | 0️⃣7️⃣",
             "type": "vless",
             "server": "159.223.17.211",
             "server_port": 443,
@@ -394,41 +355,6 @@
                     "enabled": true,
                     "public_key": "-2iaaZuCAi7I9r4680lLC8p4krVTtEFq2xj6ylvpJUc",
                     "short_id": "47890dea"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "@ipV2Ray",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s",
-                "permit_without_stream": false
-            }
-        },
-        {
-            "tag": "رایگان | REALITY | @flyv2ray | NL🇳🇱 | 0️⃣5️⃣",
-            "type": "vless",
-            "server": "159.223.234.160",
-            "server_port": 443,
-            "uuid": "f104d365-b21f-4ab2-97cb-7d90db5c94f3",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "kateihome.com",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "xyRkkZVwf7z-1HDL41tsYVx5KTJ1_h3fbAXAZ_769Cw",
-                    "short_id": "055d0384"
                 }
             },
             "transport": {
