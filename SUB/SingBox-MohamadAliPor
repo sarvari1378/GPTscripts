@@ -105,7 +105,7 @@
                 "رایگان | REALITY | @v2ray_swhil | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | REALITY | @v2ray1_ng | NL🇳🇱 | 0️⃣4️⃣",
                 "رایگان | REALITY | @V2RayTz | DE🇩🇪 | 0️⃣6️⃣",
-                "رایگان | REALITY | @forwardv2ray | NL🇳🇱 | 0️⃣1️⃣",
+                "رایگان | REALITY | @forwardv2ray | NL🇳🇱 | 0️⃣3️⃣",
                 "رایگان | REALITY | @forwardv2ray | FI🇫🇮 | 0️⃣4️⃣",
                 "رایگان | REALITY | @proxy_mtm | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
@@ -120,7 +120,7 @@
                 "رایگان | REALITY | @v2ray_swhil | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | REALITY | @v2ray1_ng | NL🇳🇱 | 0️⃣4️⃣",
                 "رایگان | REALITY | @V2RayTz | DE🇩🇪 | 0️⃣6️⃣",
-                "رایگان | REALITY | @forwardv2ray | NL🇳🇱 | 0️⃣1️⃣",
+                "رایگان | REALITY | @forwardv2ray | NL🇳🇱 | 0️⃣3️⃣",
                 "رایگان | REALITY | @forwardv2ray | FI🇫🇮 | 0️⃣4️⃣",
                 "رایگان | REALITY | @proxy_mtm | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣2️⃣"
@@ -305,7 +305,7 @@
             }
         },
         {
-            "tag": "رایگان | REALITY | @forwardv2ray | NL🇳🇱 | 0️⃣1️⃣",
+            "tag": "رایگان | REALITY | @forwardv2ray | NL🇳🇱 | 0️⃣3️⃣",
             "type": "vless",
             "server": "165.232.87.109",
             "server_port": 443,
