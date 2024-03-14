@@ -6,6 +6,5 @@ Sajed1, 5, +989105481761
 Sajed3, 1, +989156691466
 ssssss, 5, +989156691466
 
-ssarvari1378, 30
 
 Foroogh_srvr, 30
