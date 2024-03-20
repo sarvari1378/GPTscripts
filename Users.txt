@@ -1,8 +1,8 @@
-ccc61f, 1
-AmirRza, 997
-Borji, 997
-HamidSarvari, 997
-Mostafa, 997
-Sajed1, 1
-ssarvari1378, 419
-Whoknows_whoiswho, 997
+a05cf0, 1
+AmirRza, 996
+Borji, 996
+HamidSarvari, 996
+Mostafa, 996
+Sajed1, 0
+ssarvari1378, 418
+Whoknows_whoiswho, 996
