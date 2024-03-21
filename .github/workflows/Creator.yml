@@ -31,18 +31,13 @@ jobs:
 
       - name: Remove SUB directory
         run: rm -rf SUB
-
-      - name: Run REALITY-Creator
-        run: python Scripts/CreateV2ray.py  
-      
+ 
       - name: Run WORKER-Creator
         run: python Scripts/Worker-Creator.py  
 
       - name: Run SIngBox-Creator
         run: python Scripts/SingBox-Creator.py  
           
-      - name: Run TUIC-Creator
-        run: python Scripts/TUIC-Creator.py
 
       
           
