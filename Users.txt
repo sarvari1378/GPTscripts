@@ -17,3 +17,4 @@ ali, 12
 jjjj, 1
 lllliiii, 11
 cccc, 1
+oooo, 14
