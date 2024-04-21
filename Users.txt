@@ -7,4 +7,3 @@ Homakhademi, -1
 mosi138, 988
 ArefeKamyab, 23
 MahdiV, 30
-koni, 18, @koni
