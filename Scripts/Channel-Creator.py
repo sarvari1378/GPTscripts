@@ -90,7 +90,9 @@ def Create_SUBs(users, urls,PROCTCOLE):
 url = 'https://raw.githubusercontent.com/sarvari1378/GPTscripts/main/Users.txt'
 users = get_users(url)
 urls = [
-    "https://raw.githubusercontent.com/sarvari1378/Telegram_Collector/main/Subs/%40vpnstorefast.txt"
+    "https://raw.githubusercontent.com/sarvari1378/Telegram_Collector/main/Subs/%40vpnstorefast.txt",
+    "https://raw.githubusercontent.com/sarvari1378/Telegram_Collector/main/Subs/%40v2Line.txt",
+    "https://raw.githubusercontent.com/sarvari1378/Telegram_Collector/main/Subs/%40rxv2ray.txt"
 ]
 
 Create_SUBs(users, urls,'Channel')
