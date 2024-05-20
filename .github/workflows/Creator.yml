@@ -32,14 +32,10 @@ jobs:
       - name: Remove SUB directory
         run: rm -rf SUB
  
-      - name: Run WORKER-Creator
-        run: python Scripts/Worker-Creator.py  
+      - name: Run Profile-Creator
+        run: python Scripts/Profile-Creator.py  
 
-      - name: Run Channel-Creator
-        run: python Scripts/Channel-Creator.py  
-          
-
-      
+ 
           
       - name: Commit and push changes
         run: |
