@@ -6,9 +6,7 @@ Whoknows_whoiswho, 972
 Homakhademi, 25
 mosi138, 953
 ArefeKamyab, 20
-MahdiV, -5
 Parham, 25
-MohsenRahmati, -4
-Rasoul, -2
 MohammadHoseinzade, 2
 Behnaz, 18
+VIP, 30
