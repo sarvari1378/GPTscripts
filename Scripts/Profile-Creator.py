@@ -158,7 +158,7 @@ with open(json_file_path, 'r') as f:
 protocols = config_data['Protocol']
 
 # Get users
-User_url = 'https://raw.githubusercontent.com/sarvari1378/SingBOX/main/Users.txt'
+User_url = 'https://raw.githubusercontent.com/sarvari1378/GPTScripts/main/Users.txt'
 users = get_users(User_url)
 
 # Process each protocol in the JSON file
