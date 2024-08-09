@@ -166,5 +166,11 @@ users = get_users(User_url)
 for protocol in protocols:
     protocol_name = protocol['Name']
     protocol_links = protocol['Links']
+    
+    # Check if 'Split' field exists and is True, skip if it is
+    if protocol.get('Split', False):
+        print(f"Skipping protocol: {protocol_name} due to Split being True")
+        continue
+    
     responses = get_config(protocol_links)
     Create_SUBs(users, responses, protocol_name)
