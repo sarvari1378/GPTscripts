@@ -13,13 +13,6 @@ import os
 import base64
 import json
 import jdatetime
-import binascii  # Added binascii import
-
-def add_base64_padding(base64_string):
-    padding_needed = 4 - (len(base64_string) % 4)
-    if padding_needed:
-        base64_string += "=" * padding_needed
-    return base64_string
 
 def check_url_content(url, check_string):
     try:
@@ -55,11 +48,17 @@ def merge_content(responses):
     merged_content = ''
     for url in responses:
         content = responses[url]
-        if content is not None:
+        if content:
             try:
-                decoded_content = base64.b64decode(content).decode()
+                # Check if content needs base64 decoding
+                if content.startswith('vmess://'):
+                    decoded_content = base64.b64decode(content).decode('utf-8')
+                else:
+                    decoded_content = content
+
                 merged_content += decoded_content + '\n'
-            except Exception:
+            except Exception as e:
+                print(f"Error merging content from {url}: {e}")
                 merged_content += content + '\n'
     return merged_content
 
@@ -69,50 +68,50 @@ def Simple_extract_flag(line):
     return flag
 
 def extract_flag(line):
-    if line.startswith('vmess://'):
-        line = line[8:]
-        line = add_base64_padding(line)
-        try:
-            line = json.loads(base64.b64decode(line).decode('utf-8'))
-            namePart = line["ps"]
+    try:
+        if line.startswith('vmess://'):
+            line = line[8:]
+            line = base64.b64decode(line).decode('utf-8')
+            data = json.loads(line)
+            namePart = data.get("ps", "")
             flag = Simple_extract_flag(namePart)
-        except (json.JSONDecodeError, binascii.Error) as e:
-            print(f"Error decoding base64 or JSON: {e}")
-            flag = ''
-    else:
-        flag = Simple_extract_flag(line)
+        else:
+            flag = Simple_extract_flag(line)
+    except (base64.binascii.Error, json.JSONDecodeError, UnicodeDecodeError) as e:
+        print(f"Error extracting flag: {e}")
+        flag = ''
     return flag
+
 
 def Vmess_rename(vmess_config, new_name):
     vmess_data = vmess_config[8:]
-    vmess_data = add_base64_padding(vmess_data)
-    try:
-        config = json.loads(base64.b64decode(vmess_data).decode('utf-8'))
-        config["ps"] = new_name
-        encoded_data = base64.b64encode(json.dumps(config).encode()).decode()
-        vmess_config = "vmess://" + encoded_data
-    except (json.JSONDecodeError, binascii.Error) as e:
-        print(f"Error decoding or encoding JSON: {e}")
+    config = json.loads(base64.b64decode(vmess_data))
+    config["ps"] = new_name
+    encoded_data = base64.b64encode(json.dumps(config).encode()).decode()
+    vmess_config = "vmess://" + encoded_data
     return vmess_config
 
 def rename_configs(content, name):
     lines = content.split('\n')
     new_lines = []
     for i, line in enumerate(lines):
-        if line.startswith('vmess://'):
-            flag = extract_flag(line)
-            now = datetime.now(pytz.timezone('Asia/Tehran'))
-            hour = now.strftime('%H:%M')
-            date = jdatetime.date.today().strftime('%Y-%m-%d')
-            new_name = f'|{flag}|{hour}|{date}|{name}|{i+1}|'
-            line = Vmess_rename(line, new_name)
-        elif '#' in line:
-            flag = extract_flag(line)
-            line = line.split('#')[0]
-            now = datetime.now(pytz.timezone('Asia/Tehran'))
-            hour = now.strftime('%H:%M')
-            date = jdatetime.date.today().strftime('%Y-%m-%d')
-            line += f'#|{flag}|{hour}|{date}|{name}|{i+1}|'
+        try:
+            if line.startswith('vmess://'):
+                flag = extract_flag(line)
+                now = datetime.now(pytz.timezone('Asia/Tehran'))
+                hour = now.strftime('%H:%M')
+                date = jdatetime.date.today().strftime('%Y-%m-%d')
+                new_name = f'|{flag}|{hour}|{date}|{name}|{i+1}|'
+                line = Vmess_rename(line, new_name)
+            elif '#' in line:
+                flag = extract_flag(line)
+                line = line.split('#')[0]
+                now = datetime.now(pytz.timezone('Asia/Tehran'))
+                hour = now.strftime('%H:%M')
+                date = jdatetime.date.today().strftime('%Y-%m-%d')
+                line += f'#|{flag}|{hour}|{date}|{name}|{i+1}|'
+        except Exception as e:
+            print(f"Error processing line: {e}")
         new_lines.append(line)
     return '\n'.join(new_lines)
 
@@ -136,20 +135,47 @@ def get_users(url):
             users.append(User(items[0].strip(), items[1].strip()))
     return users
 
-def Create_SUBs(users, responses, protocol_name):
+
+
+def Create_SUBs(users, responses, protocol_name, protocol_split, protocol_links):
     if not os.path.exists('SUB'):
         os.makedirs('SUB')
-    for user in users:
-        if float(user.date) <= 0:
-            content = 'vless://64694D4A-2C05-4FFE-AEF1-68C0169CCCB7@146.248.115.39:443?encryption=none&fp=firefox&mode=gun&pbk=TXpA-KUEqsg6YlZUXf0gZIe14rFjKZZNAqWzjruNoh8&security=reality&serviceName=&sid=790D3C76&sni=www.speedtest.net&spx=%2F&type=grpc#اشتراک شما به پایان رسیده است.'
-        else:
-            merged_content = merge_content(responses)
-            content = rename_configs(merged_content, user.username)
-            line = f'vless://64694D4A-2C05-4FFE-AEF1-68C0169CCCB7@146.248.115.39:443?encryption=none&fp=firefox&mode=gun&pbk=TXpA-KUEqsg6YlZUXf0gZIe14rFjKZZNAqWzjruNoh8&security=reality&serviceName=&sid=790D3C76&sni=www.speedtest.net&spx=%2F&type=grpc#|👤نام: {user.username}|⌛️روز های باقی مانده: {user.date}|'
-            content = line + '\n' + content
-        filename = f'SUB/{protocol_name}-{user.username}'
-        with open(filename, 'w') as f:
-            f.write(content)
+
+    if protocol_split:
+        num_users = len(users)
+        num_links = len(protocol_links)
+        users_per_link = num_users // num_links
+
+        for i, link in enumerate(protocol_links):
+            start_index = i * users_per_link
+            end_index = start_index + users_per_link if i != num_links - 1 else num_users  # Ensure all users are assigned
+
+            for user in users[start_index:end_index]:
+                if float(user.date) <= 0:
+                    content = 'vless://64694D4A-2C05-4FFE-AEF1-68C0169CCCB7@146.248.115.39:443?encryption=none&fp=firefox&mode=gun&pbk=TXpA-KUEqsg6YlZUXf0gZIe14rFjKZZNAqWzjruNoh8&security=reality&serviceName=&sid=790D3C76&sni=www.speedtest.net&spx=%2F&type=grpc#اشتراک شما به پایان رسیده است.'
+                else:
+                    content = responses.get(link, '')
+                    content = rename_configs(content, user.username)
+                    line = f'vless://64694D4A-2C05-4FFE-AEF1-68C0169CCCB7@146.248.115.39:443?encryption=none&fp=firefox&mode=gun&pbk=TXpA-KUEqsg6YlZUXf0gZIe14rFjKZZNAqWzjruNoh8&security=reality&serviceName=&sid=790D3C76&sni=www.speedtest.net&spx=%2F&type=grpc#|👤نام: {user.username}|⌛️روز های باقی مانده: {user.date}|'
+                    content = line + '\n' + content
+
+                filename = f'SUB/{protocol_name}-{user.username}'
+                with open(filename, 'w') as f:
+                    f.write(content)
+    else:
+        for user in users:
+            if float(user.date) <= 0:
+                content = 'vless://64694D4A-2C05-4FFE-AEF1-68C0169CCCB7@146.248.115.39:443?encryption=none&fp=firefox&mode=gun&pbk=TXpA-KUEqsg6YlZUXf0gZIe14rFjKZZNAqWzjruNoh8&security=reality&serviceName=&sid=790D3C76&sni=www.speedtest.net&spx=%2F&type=grpc#اشتراک شما به پایان رسیده است.'
+            else:
+                merged_content = merge_content(responses)
+                content = rename_configs(merged_content, user.username)
+                line = f'vless://64694D4A-2C05-4FFE-AEF1-68C0169CCCB7@146.248.115.39:443?encryption=none&fp=firefox&mode=gun&pbk=TXpA-KUEqsg6YlZUXf0gZIe14rFjKZZNAqWzjruNoh8&security=reality&serviceName=&sid=790D3C76&sni=www.speedtest.net&spx=%2F&type=grpc#|👤نام: {user.username}|⌛️روز های باقی مانده: {user.date}|'
+                content = line + '\n' + content
+
+            filename = f'SUB/{protocol_name}-{user.username}'
+            with open(filename, 'w') as f:
+                f.write(content)
+
 
 # Read JSON configuration file
 json_file_path = 'Jsons/config.json'  # Adjust the path to your JSON file
@@ -166,5 +192,9 @@ users = get_users(User_url)
 for protocol in protocols:
     protocol_name = protocol['Name']
     protocol_links = protocol['Links']
+    protocol_split = protocol.get('Split', False)  # Get the Split value, default to False if not present
+    
     responses = get_config(protocol_links)
-    Create_SUBs(users, responses, protocol_name)
+    
+    # Call the modified Create_SUBs function with the additional parameters
+    Create_SUBs(users, responses, protocol_name, protocol_split, protocol_links)
