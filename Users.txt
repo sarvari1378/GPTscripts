@@ -1,5 +1,5 @@
 1f0043, 1
-Borji, 855
-Whoknows_whoiswho, 897
+Borji, 855, , BackUp
+Whoknows_whoiswho, 897, , WORKER
 mosi138, 878
 VIP, 964, , Fredom
