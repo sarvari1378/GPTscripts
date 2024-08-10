@@ -1,5 +1,5 @@
 # libraries
-from datetime import datetime
+from datetime import datetime, timedelta
 import requests
 from datetime import datetime
 import pytz
@@ -16,24 +16,6 @@ def add_base64_padding(base64_string):
     if padding_needed:
         base64_string += "=" * padding_needed
     return base64_string
-
-def check_url_content(url, check_string):
-    try:
-        response = requests.get(url)
-        if response.status_code == 200:
-            if check_string in response.text:
-                return False
-            else:
-                return True
-        else:
-            print(f"Failed to fetch content from URL: {url}. Status code: {response.status_code}")
-            return True
-    except requests.RequestException as e:
-        print(f"Request Exception: {e}")
-        return True
-    except Exception as e:
-        print(f"An error occurred: {e}")
-        return True
 
 def get_config(urls):
     responses = {}
@@ -111,10 +93,6 @@ def rename_configs(content, name):
             line += f'#|{flag}|{hour}|{date}|{name}|{i+1}|'
         new_lines.append(line)
     return '\n'.join(new_lines)
-
-def save_to_file(content, filename):
-    with open(filename, 'w') as f:
-        f.write(content)
 
 def remove_lines(content, num):
     lines = content.split('\n')
