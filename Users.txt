@@ -2,4 +2,4 @@
 Borji, 855
 Whoknows_whoiswho, 897
 mosi138, 878
-VIP, 964, , WORKER
+VIP, 964, , Fredom
