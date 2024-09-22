@@ -228,5 +228,5 @@ for protocol in protocols:
         print(f"{protocol_name} is not splited")
 
 
-file_path = 'Jsons/Config.json'  # Replace with the actual path to your JSON file
+file_path = 'Jsons/config.json'  # Replace with the actual path to your JSON file
 reorder_json_links(file_path)
