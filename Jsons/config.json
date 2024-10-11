@@ -17,7 +17,7 @@
         {
             "Name": "WORKER",
             "Links": [
-                "https://qv2raylinks.mobel85128.workers.dev",
+                "https://raw.githubusercontent.com/sarvari1378/SingBOX/refs/heads/main/SUB/WORKER-VIP",
                 "https://sub.moryvpnbot.workers.dev/bot/normal"
             ],
             "Split": false
