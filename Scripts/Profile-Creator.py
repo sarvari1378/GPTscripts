@@ -55,32 +55,62 @@ def Simple_extract_flag(line):
 
 def extract_flag(line):
     if line.startswith('vmess://'):
-        line = line[8:]
-        line = add_base64_padding(line)
+        line = line[8:]  # Remove the 'vmess://' prefix
+        line = add_base64_padding(line)  # Add padding to Base64 string
+        
         try:
-            line = json.loads(base64.b64decode(line).decode('utf-8'))
-            namePart = line["ps"]
+            # Decode Base64 content
+            decoded_data = base64.b64decode(line)
+            
+            # Try decoding as UTF-8. If it fails, return an empty flag.
+            line = decoded_data.decode('utf-8')
+            
+            # Try to load JSON and extract the "ps" field
+            json_data = json.loads(line)
+            namePart = json_data.get("ps", "")
+            
+            # Extract and return the flag
             flag = Simple_extract_flag(namePart)
-        except (json.JSONDecodeError, binascii.Error) as e:
-            pass
-            flag = ''
+        except (json.JSONDecodeError, binascii.Error, UnicodeDecodeError) as e:
+            # Log or handle the error
+            print(f"Error while decoding or extracting flag: {e}")
+            flag = ''  # Return an empty flag in case of error
     else:
+        # Handle non-vmess lines
         flag = Simple_extract_flag(line)
+    
     return flag
+
+
+
 
 def Vmess_rename(vmess_config, new_name):
     vmess_data = vmess_config[8:]  # Remove the 'vmess://' prefix
     vmess_data = add_base64_padding(vmess_data)  # Ensure base64 string is properly padded
+    
     try:
-        # Decode base64, parse JSON, modify the configuration, and encode it back
-        config = json.loads(base64.b64decode(vmess_data))
+        # Decode base64 data
+        decoded_data = base64.b64decode(vmess_data)
+        
+        # Attempt to decode to a string (UTF-8)
+        config_str = decoded_data.decode('utf-8')
+        
+        # Parse JSON, modify the configuration, and encode it back
+        config = json.loads(config_str)
         config["ps"] = new_name
-        encoded_data = base64.b64encode(json.dumps(config).encode()).decode()
+        
+        # Re-encode the modified config back to base64
+        encoded_data = base64.b64encode(json.dumps(config).encode('utf-8')).decode('utf-8')
+        
+        # Return the modified vmess config
         vmess_config = "vmess://" + encoded_data
-    except (json.JSONDecodeError, binascii.Error):
-        # If an error occurs during decoding or JSON processing, handle it silently
-        pass
+    
+    except (json.JSONDecodeError, binascii.Error, UnicodeDecodeError) as e:
+        # Log the error for debugging purposes
+        print(f"Error while processing vmess config: {e}")
+    
     return vmess_config
+
 
 
 def rename_configs(content, name):
@@ -200,6 +230,7 @@ def reorder_json_links(file_path):
     # Save the modified JSON back to the file
     with open(file_path, 'w') as file:
         json.dump(data, file, indent=4)
+
 
 
 # Read JSON configuration file
