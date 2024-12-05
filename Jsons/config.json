@@ -25,10 +25,10 @@
         {
             "Name": "BackUp",
             "Links": [
-                "https://raw.githubusercontent.com/sarvari1378/Telegram_Collector/main/Subs/%40vpnstorefast.txt",
-                "https://raw.githubusercontent.com/sarvari1378/Telegram_Collector/main/Subs/Seyyed_Cloud.txt",
-                "https://raw.githubusercontent.com/sarvari1378/Telegram_Collector/main/Subs/%40v2Line.txt",
-                "https://raw.githubusercontent.com/sarvari1378/Telegram_Collector/main/Subs/%40Freakconfig.txt"
+                "https://raw.githubusercontent.com/sarvari1378/SingBOX/main/Collected_Links/%40vpnstorefast.txt",
+                "https://raw.githubusercontent.com/sarvari1378/SingBOX/main/Collected_Links/Seyyed_Cloud.txt",
+                "https://raw.githubusercontent.com/sarvari1378/SingBOX/main/Collected_Links/%40v2Line.txt",
+                "https://raw.githubusercontent.com/sarvari1378/SingBOX/main/Collected_Links/%40Freakconfig.txt"
             ],
             "Split": false
         },
