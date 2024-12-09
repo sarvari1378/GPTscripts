@@ -33,6 +33,16 @@
             "Split": false
         },
         {
+            "Name": "FREEIRAN",
+            "Links": [
+                "https://raw.githubusercontent.com/mahsanet/MahsaFreeConfig/refs/heads/main/mci/sub_1.txt",
+                "https://raw.githubusercontent.com/mahsanet/MahsaFreeConfig/refs/heads/main/mci/sub_1.txt",
+                "https://raw.githubusercontent.com/mahsanet/MahsaFreeConfig/refs/heads/main/mci/sub_1.txt",
+                "https://raw.githubusercontent.com/mahsanet/MahsaFreeConfig/refs/heads/main/mci/sub_1.txt"
+            ],
+            "Split": True
+        },
+        {
             "Name": "Fredom",
             "Links": [
                 "https://little-night-b5b8.yadalev566.workers.dev/sub",
