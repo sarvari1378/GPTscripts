@@ -40,7 +40,7 @@
                 "https://raw.githubusercontent.com/mahsanet/MahsaFreeConfig/refs/heads/main/mci/sub_1.txt",
                 "https://raw.githubusercontent.com/mahsanet/MahsaFreeConfig/refs/heads/main/mci/sub_1.txt"
             ],
-            "Split": True
+            "Split": true
         },
         {
             "Name": "Fredom",
